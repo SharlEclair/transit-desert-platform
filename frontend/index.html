@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melbourne Transit Desert & Equity Platform | 3D Geospatial Explorer</title>
+  <meta name="description" content="Dynamic 3D Hexagonal Transit Desert and Equity Scoring Platform for Greater Melbourne using DuckDB, r5py, Uber H3, and MapLibre GL JS.">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- MapLibre GL JS v4 -->
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Application Styles -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Top Header Bar -->
+    <header class="topbar glass-panel" id="topbar">
+      <div class="brand-group">
+        <div class="brand-icon">
+          <i data-lucide="layers"></i>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">Transit Desert & Equity Platform</h1>
+          <span class="brand-subtitle">Greater Melbourne Multimodal Analysis (H3 Res-9 &times; r5py &times; DuckDB)</span>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Counter Badges -->
+      <div class="header-stats" id="headerStats">
+        <div class="stat-pill">
+          <span class="stat-label">Analyzed Cells</span>
+          <span class="stat-val" id="statAnalyzedCells">121,802</span>
+        </div>
+        <div class="stat-pill highlight-pill">
+          <span class="stat-label">Priority Deserts</span>
+          <span class="stat-val text-neon-red" id="statDesertCells">12,959</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-label">Impacted Population</span>
+          <span class="stat-val text-neon-cyan" id="statDesertPop">--</span>
+        </div>
+        <div class="system-status-badge">
+          <span class="pulse-dot"></span>
+          <span>DuckDB Engine Active</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="workspace">
+      <!-- 3D Map Container -->
+      <div id="map" class="map-container"></div>
+
+      <!-- Left Floating Sidebar (Controls & Leaderboard) -->
+      <aside class="sidebar glass-panel" id="sidebar">
+        <!-- Control Group: Metric Switcher -->
+        <section class="control-card">
+          <h2 class="card-title"><i data-lucide="sliders" class="icon-sm"></i> Visualization Metric</h2>
+          <div class="segmented-control" role="tablist">
+            <button class="seg-btn active" id="btnMetricTDI" data-metric="tdi" role="tab" aria-selected="true">
+              <span class="dot dot-red"></span> Transit Desert (TDI)
+            </button>
+            <button class="seg-btn" id="btnMetricVuln" data-metric="vulnerability" role="tab" aria-selected="false">
+              <span class="dot dot-purple"></span> Vulnerability ($V_i$)
+            </button>
+            <button class="seg-btn" id="btnMetricAccess" data-metric="accessibility" role="tab" aria-selected="false">
+              <span class="dot dot-cyan"></span> Accessibility ($A_i$)
+            </button>
+          </div>
+        </section>
+
+        <!-- Control Group: 3D Height & Filters -->
+        <section class="control-card">
+          <h2 class="card-title"><i data-lucide="box" class="icon-sm"></i> 3D Layer Adjustments</h2>
+          
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="sliderHeightScale">3D Height Extrusion</label>
+              <span class="slider-val" id="valHeightScale">1.5&times;</span>
+            </div>
+            <input type="range" id="sliderHeightScale" min="0.2" max="3.5" step="0.1" value="1.5" class="custom-slider">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="sliderMinTDI">Min TDI Cutoff Filter</label>
+              <span class="slider-val" id="valMinTDI">0.34</span>
+            </div>
+            <input type="range" id="sliderMinTDI" min="0.0" max="0.75" step="0.02" value="0.34" class="custom-slider">
+          </div>
+
+          <div class="filter-row">
+            <div class="select-wrapper">
+              <label for="selectSuburbFilter" class="sr-only">Filter Suburb</label>
+              <select id="selectSuburbFilter" class="custom-select">
+                <option value="">All Greater Melbourne Suburbs</option>
+              </select>
+            </div>
+            <button id="btnResetView" class="icon-btn" title="Reset Camera View">
+              <i data-lucide="rotate-ccw"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- Suburb Leaderboard -->
+        <section class="control-card leaderboard-card">
+          <div class="card-header-row">
+            <h2 class="card-title"><i data-lucide="trophy" class="icon-sm text-neon-red"></i> Worst Transit Deserts</h2>
+            <span class="badge badge-subtle">Top 10 Suburbs</span>
+          </div>
+          <p class="card-desc">Click any suburb to fly the 3D camera to its high-disadvantage corridor:</p>
+
+          <div class="leaderboard-list" id="leaderboardList">
+            <div class="loading-state">
+              <div class="spinner"></div>
+              <span>Querying DuckDB Analytics...</span>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Right Floating Hexagon Inspector Panel -->
+      <aside class="inspector-card glass-panel" id="inspectorCard">
+        <div class="inspector-header">
+          <div class="inspector-badge" id="inspectorBadge">Hexagon Inspector</div>
+          <button id="btnCloseInspector" class="close-btn" aria-label="Close Inspector">&times;</button>
+        </div>
+        
+        <div class="inspector-body" id="inspectorBody">
+          <div class="empty-inspector">
+            <i data-lucide="mouse-pointer-click" class="icon-lg text-muted"></i>
+            <p>Hover or click on any 3D hexagon to inspect its demographic need and transit travel times.</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Floating Legend -->
+      <div class="map-legend glass-panel" id="mapLegend">
+        <div class="legend-header">
+          <span class="legend-title" id="legendTitle">Transit Desert Index (TDI)</span>
+          <span class="legend-unit" id="legendUnit">High Disadvantage &times; Low Access</span>
+        </div>
+        <div class="legend-bar" id="legendBar"></div>
+        <div class="legend-labels" id="legendLabels">
+          <span>Low (0.0)</span>
+          <span>Moderate (0.4)</span>
+          <span>Critical (0.8+)</span>
+        </div>
+      </div>
+
+      <!-- Map Viewport Overlay Controls (Pitch / Rotation / Reset) -->
+      <div class="map-camera-controls glass-panel">
+        <button id="btnPitchToggle" class="cam-btn" title="Toggle 2D / 3D Pitch View">
+          <i data-lucide="compass"></i>
+          <span id="labelPitch">3D</span>
+        </button>
+        <button id="btnZoomIn" class="cam-btn" title="Zoom In"><i data-lucide="plus"></i></button>
+        <button id="btnZoomOut" class="cam-btn" title="Zoom Out"><i data-lucide="minus"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="/static/app.js"></script>
+</body>
+</html>
