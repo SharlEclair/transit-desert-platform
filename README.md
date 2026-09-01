@@ -30,23 +30,23 @@ This platform replaces naive spatial buffers with **dynamic multimodal travel-ti
 ```mermaid
 graph TD
     subgraph Data Layer
-        A1[ABS Census 2021 SA1 & SEIFA IRSD] -->|Spatial Ingestion & EPSG:4326 Transform| D[(DuckDB transit_equity.db)]
-        A2[OpenStreetMap Victoria PBF] -->|Topological Road Graph| R5[r5py Conveyal R5 Engine]
-        A3[8 Flat GTFS Transit Feeds] -->|Sanitized Schedule Bridging| R5
-        A4[Uber H3 Res-9 Grid 121,802 Hexagons] -->|Centroid Points| D
+        A1["ABS Census 2021 SA1 and SEIFA IRSD"] -->|"Spatial Ingestion (EPSG:4326)"| D[("DuckDB Database")]
+        A2["OpenStreetMap Victoria PBF"] -->|"Topological Road Graph"| R5["r5py Conveyal R5 Engine"]
+        A3["8 Flat GTFS Transit Feeds"] -->|"Sanitized Schedule Bridging"| R5
+        A4["Uber H3 Res-9 Grid (121,802 Hexagons)"] -->|"Centroid Points"| D
     end
 
     subgraph Analytical Core
-        R5 -->|Batched Origin-Destination Computations| TM[melb_travel_matrix 2,598 Pairs]
+        R5 -->|"Batched Matrix Computations"| TM["melb_travel_matrix (2,598 Pairs)"]
         TM --> D
-        D -->|DuckDB Native ST_Intersects Spatial Join| EQ[Materialized melb_equity_scores]
-        EQ -->|P80 Cutoff Filtering| VD[SQL View v_transit_deserts]
+        D -->|"Native ST_Intersects Spatial Join"| EQ["Materialized melb_equity_scores"]
+        EQ -->|"P80 Cutoff Filtering"| VD["SQL View v_transit_deserts"]
     end
 
-    subgraph API & Visualization
-        D -->|Read-Only In-Process Analytics| API[FastAPI Backend src/api/main.py]
-        API -->|GeoJSON 3D Hexagons & Stats REST API| UI[MapLibre GL JS 3D Client]
-        UI -->|Interactive Controls| UX[Metric Switcher, 3D Extrusion, Suburb Leaderboard & Inspector]
+    subgraph API and Visualization
+        D -->|"Read-Only In-Process Analytics"| API["FastAPI Backend (src/api/main.py)"]
+        API -->|"GeoJSON 3D Hexagons and REST API"| UI["MapLibre GL JS 3D Client"]
+        UI -->|"Interactive Controls"| UX["Metric Switcher, 3D Extrusion and Inspector"]
     end
 ```
 
@@ -56,17 +56,26 @@ graph TD
 
 ### 1. Multimodal Accessibility Score ($A_i \in [0.0, 1.0]$)
 For each H3 hexagon $i$, accessibility is computed using linear decay against a peak 45-minute commute cutoff across strategic employment, healthcare, and education destinations (Royal Melbourne Hospital, Monash University Clayton, Chadstone Shopping Centre):
-$$A_i = \frac{1}{N_{\text{poi}}} \sum_{p \in \text{POIs}} \max\left(0.0, 1.0 - \frac{\text{travel\_time\_p50}_{i, p}}{45.0}\right)$$
+
+$$A_i = \frac{1}{N_{\text{poi}}} \sum_{p \in \text{POIs}} \max\left(0.0, 1.0 - \frac{T_{i, p}^{\text{p50}}}{45.0}\right)$$
+
+where $T_{i, p}^{\text{p50}}$ is the median transit travel time in minutes from origin $i$ to destination $p$.
 
 ### 2. Demographic Need / Vulnerability Score ($V_i \in [0.0, 1.0]$)
 Combines normalized socio-economic disadvantage (ABS SEIFA Index of Relative Socio-economic Disadvantage, which incorporates low household income, zero vehicle ownership, and unemployment) with log-normalized population density:
-$$\text{SEIFA\_Disadvantage}_i = \frac{1192.0 - \text{seifa\_irsd\_score}_i}{1192.0 - 266.0}$$
-$$\text{Norm\_Density}_i = \min\left(1.0, \frac{\ln(1 + \text{pop\_density}_i)}{\ln(1 + 35000)}\right)$$
-$$V_i = 0.60 \times \text{SEIFA\_Disadvantage}_i + 0.40 \times \text{Norm\_Density}_i$$
 
-### 3. Transit Desert Index ($TDI_i \in [0.0, 1.0]$)
+$$\text{Disadvantage}_i = \frac{1192.0 - S_i}{1192.0 - 266.0}$$
+
+$$\text{Density}_i = \min\left(1.0, \frac{\ln(1 + D_i)}{\ln(1 + 35000)}\right)$$
+
+$$V_i = 0.60 \times \text{Disadvantage}_i + 0.40 \times \text{Density}_i$$
+
+where $S_i$ is the ABS SEIFA IRSD score and $D_i$ is the population density ($\text{people}/\text{km}^2$).
+
+### 3. Transit Desert Index ($\text{TDI}_i \in [0.0, 1.0]$)
 A high Transit Desert Index identifies populated communities with high socio-economic vulnerability coupled with near-zero multimodal transit accessibility:
-$$TDI_i = V_i \times (1.0 - A_i)$$
+
+$$\text{TDI}_i = V_i \times (1.0 - A_i)$$
 
 ---
 
@@ -111,8 +120,8 @@ $$TDI_i = V_i \times (1.0 - A_i)$$
 
 ### 1. Clone & Set Up Environment
 ```bash
-git clone https://github.com/your-username/transit-desert.git
-cd transit-desert
+git clone https://github.com/SharlEclair/transit-desert-platform.git
+cd transit-desert-platform
 
 # Create virtual environment
 python -m venv .venv
