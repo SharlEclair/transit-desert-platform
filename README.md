@@ -29,22 +29,22 @@ This platform replaces naive spatial buffers with **dynamic multimodal travel-ti
 
 ```mermaid
 graph TD
-    subgraph Data Layer
-        A1["ABS Census 2021 SA1 and SEIFA IRSD"] -->|"Spatial Ingestion (EPSG:4326)"| D[("DuckDB Database")]
+    subgraph "Data Layer"
+        A1["ABS Census 2021 SA1 and SEIFA IRSD"] -->|"Spatial Ingestion: EPSG:4326"| D[("DuckDB Database")]
         A2["OpenStreetMap Victoria PBF"] -->|"Topological Road Graph"| R5["r5py Conveyal R5 Engine"]
         A3["8 Flat GTFS Transit Feeds"] -->|"Sanitized Schedule Bridging"| R5
-        A4["Uber H3 Res-9 Grid (121,802 Hexagons)"] -->|"Centroid Points"| D
+        A4["Uber H3 Res-9 Grid: 121,802 Hexagons"] -->|"Centroid Points"| D
     end
 
-    subgraph Analytical Core
-        R5 -->|"Batched Matrix Computations"| TM["melb_travel_matrix (2,598 Pairs)"]
+    subgraph "Analytical Core"
+        R5 -->|"Batched Matrix Computations"| TM["melb_travel_matrix: 2,598 Pairs"]
         TM --> D
         D -->|"Native ST_Intersects Spatial Join"| EQ["Materialized melb_equity_scores"]
-        EQ -->|"P80 Cutoff Filtering"| VD["SQL View v_transit_deserts"]
+        EQ -->|"P80 Cutoff Filtering"| VD["SQL View: v_transit_deserts"]
     end
 
-    subgraph API and Visualization
-        D -->|"Read-Only In-Process Analytics"| API["FastAPI Backend (src/api/main.py)"]
+    subgraph "API and Visualization"
+        D -->|"Read-Only In-Process Analytics"| API["FastAPI Backend"]
         API -->|"GeoJSON 3D Hexagons and REST API"| UI["MapLibre GL JS 3D Client"]
         UI -->|"Interactive Controls"| UX["Metric Switcher, 3D Extrusion and Inspector"]
     end
