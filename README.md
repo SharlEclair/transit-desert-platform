@@ -79,6 +79,8 @@ A positive $\Delta\text{TDI}$ quantifies exact spatial disadvantage reduction de
 | **Stage 2: Active Metro** | 79 | **0.2014** | **0.1743** | **0.5500** | **1,221 cells (11.2%)** |
 | **Stage 3: 2030 Full Network** | 177 | **0.2022** | **0.1741** | **0.5493** | **2,204 cells (20.2%)** |
 
+> 📖 **Full Analytical Whitepaper:** For an in-depth breakdown of corridor-by-corridor equity relief, slum cluster accessibility gains, BKC catchment dynamics, and transit policy recommendations, read the complete [**ANALYSIS_REPORT.md**](ANALYSIS_REPORT.md).
+
 ---
 
 ## 🗄️ Data Sources & Attribution
