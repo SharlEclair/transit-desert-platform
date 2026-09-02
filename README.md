@@ -168,28 +168,31 @@ Open your browser at **`http://127.0.0.1:8000/`** to interact with the 3D Geospa
 
 ```text
 transit-desert-platform/
-├── .env.example                     # Environment template
+├── .env.example                     # Environment template for CARTO API keys
 ├── .gitignore                       # Git exclusion rules for secrets & heavy binaries
+├── ANALYSIS_REPORT.md               # Analytical spatial equity report & policy whitepaper
 ├── LICENSE                          # MIT License
-├── README.md                        # Project documentation
+├── README.md                        # Project documentation & quickstart
 ├── requirements.txt                 # Python dependencies
 ├── data/
-│   ├── raw/                         # Raw OSM, GTFS, census, and KML data
-│   └── processed/                   # DuckDB database, GTFS archives, GeoJSON layers
+│   ├── raw/                         # Raw OSM, GTFS timetable CSVs, census, and KML data
+│   └── processed/                   # Processed GeoJSON layers and standardized GTFS feeds
 ├── frontend/
 │   ├── index.html                   # 3D Dashboard client interface
-│   ├── styles.css                   # Glassmorphism aesthetic theme & HUD components
+│   ├── style.css                    # Glassmorphism aesthetic theme & HUD components
 │   └── app.js                       # MapLibre GL JS engine & state orchestrator
-└── src/
-    ├── api/
-    │   ├── main.py                  # FastAPI server & Melbourne endpoints
-    │   └── mumbai_router.py         # 3-Stage Mumbai simulation & transit endpoints
-    └── mumbai/
-        ├── build_final_geojsons.py  # Spatial GeoJSON extractor
-        ├── compute_travel_matrix.py # R5 FastRaptor travel time computer
-        ├── finalize_kml_mapping.py  # KML v3 station entity resolution
-        ├── materialize_2030_equity.py # DuckDB 3-stage equity materializer
-        └── synthesize_future_gtfs.py # Bi-directional GTFS synthesizer
+├── src/
+│   ├── api/
+│   │   ├── main.py                  # FastAPI server & global config endpoint
+│   │   └── mumbai_router.py         # 3-Stage Mumbai simulation & transit endpoints
+│   └── mumbai/
+│       ├── build_demographics.py    # Demographic spatial disaggregation to H3
+│       ├── build_final_geojsons.py  # Spatial GeoJSON extractor & Shapely track slicer
+│       ├── compute_travel_matrix.py # R5 FastRaptor multimodal travel time computer
+│       ├── harmonize_trains.py      # Suburban Rail timetable GTFS converter
+│       ├── materialize_2030_equity.py # DuckDB 3-stage equity view materializer
+│       └── synthesize_future_gtfs.py # Bi-directional synthetic Metro GTFS generator
+└── tests/                           # Integration & unit test suite
 ```
 
 ---

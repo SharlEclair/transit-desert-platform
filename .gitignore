@@ -79,3 +79,11 @@ hs_err_pid*.log
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Internal Development Logs & Planning Scratchpads
+*_PLAN.md
+*PLAN.md
+PROGRESS.md
+project_context.md
+Implementation_Plan.md
+
