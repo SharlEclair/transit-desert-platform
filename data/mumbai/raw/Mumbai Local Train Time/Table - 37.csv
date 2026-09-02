@@ -1,0 +1,31 @@
+STATIONS UP TRAINS,Borivali 90156 12 CAR,Virar 90158 12 CAR,Goregoan 90160 12 CAR,Borivali 90162 12 CAR,Virar 90164 12 CAR,Borivali 90166 12 CAR,Borivali 90168 12 CAR,Virar 92026 15 CAR,Dahanu Road 93004 12 CAR,Bandra 90170 12 CAR,Borivali* 90172 12 CAR,Vasai Road 90174 12 CAR,Borivali 90176 12 CAR,Andheri 90178 12 CAR,Goregoan 90180 12 CAR
+VIRAR,,06:50,,,06:54,,,07:01,07:08,NOT ON,Ladies,,,,
+Nalla Sopara,,06:56,,,07:00,,,07:07,,SUN,Special,,,,
+VASAI ROAD,,07:01,,,07:05,,,07:12,07:17,ONLY,ON SUN,07:14,,,
+Naigaon,,07:05,,,07:10,,,07:17,,,General,07:20,,,
+BHAYANDAR,,07:11,,,07:16,,,07:23,07:25,,,07:26,,,
+Mira Road,,07:16,,,07:21,,,07:28,,,,07:31,,,
+Dahisar,,07:20,,,07:25,,,07:32,,,,07:35,,,
+BORIVALI,07:25,07:24,,07:28,07:30,07:32,07:36,07:37,07:34,,07:40,07:40,07:44,,
+Kandivali,07:31,,,07:34,,07:38,07:41,,,,07:45,,07:49,,
+Malad,07:34,,,07:37,,07:41,07:44,,,,07:48,,07:52,,
+Goregaon,07:37,,07:35,07:40,,07:44,07:48,,,,07:51,,07:55,,07:56
+Ram Mandir,--,,07:38,07:42,,07:46,--,,,,07:53,,07:57,,08:00
+Jogeshwari,07:41,,07:41,07:45,,07:49,07:52,,,,07:56,,08:00,,08:03
+ANDHERI,07:45,07:37,07:45,07:49,07:42,07:53,07:57,,07:48,,08:00,07:54,08:04,08:06,08:08
+Vile Parle,,,07:48,07:53,,07:56,,NOT ON,,,08:03,,08:07,08:10,08:12
+Santa Cruz,,,07:51,07:56,,07:59,,SUN,,,08:06,,08:10,08:13,08:15
+Khar Road,,,07:54,07:59,,08:03,,ONLY,,,08:10,,08:14,08:17,08:20
+BANDRA,07:54,07:46,08:00,08:03,07:51,08:07,08:06,,07:57,08:10,08:15,08:03,08:18,08:21,08:25
+Mahim Jn.,,,08:03,08:06,,08:10,,,,08:14,08:18,,08:21,08:24,08:28
+Matunga Road,,,08:06,08:09,,08:13,,,,08:17,08:21,,08:24,08:27,08:31
+DADAR,08:00,07:52,08:10,08:13,07:57,08:17,08:12,,08:03,08:21,08:25,08:09,08:28,08:31,08:35
+Prabhadevi,,,08:12,08:15,,08:19,,,,08:23,08:27,,08:30,08:33,08:37
+Lower Parel,,,08:15,08:18,,08:22,,,,08:26,08:30,,08:33,08:36,08:40
+Mahalakshmi,,,08:18,08:21,,08:25,,,,08:29,08:33,,08:36,08:39,08:43
+M'BAI CENTRAL(L,08:07,07:59,08:21,08:24,08:04,08:28,08:19,,08:10,08:32,08:36,08:16,08:39,08:42,08:46
+Grant Road,08:09,08:01,08:23,08:26,08:06,08:30,08:21,,08:12,08:34,08:38,08:18,08:41,08:44,08:48
+Charni Road,08:11,08:03,08:26,08:28,08:08,08:32,08:24,,08:14,08:36,08:40,08:21,08:43,08:46,08:50
+Marine Lines,08:14,08:06,08:29,08:31,08:11,08:35,08:28,,08:17,08:39,08:43,08:24,08:46,08:49,08:53
+CHURCHGATE,08:20,08:11,08:32,08:36,08:16,08:40,08:32,,08:23,08:43,08:46,08:29,08:49,08:52,08:56
+*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General,*Ladies Special On Sun.General

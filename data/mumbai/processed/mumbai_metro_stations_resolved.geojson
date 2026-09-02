@@ -1,0 +1,3728 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Mumbai Metro Stations (2030 Network)",
+    "count": 177,
+    "operational_count": 79,
+    "under_construction_count": 98
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82153545939327,
+          19.13029733503171
+        ]
+      },
+      "properties": {
+        "station_name": "Versova",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#00AEEF",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83041705316391,
+          19.12828091261969
+        ]
+      },
+      "properties": {
+        "station_name": "D.N. Nagar",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#00AEEF",
+        "interchange": "Line 2A — Andheri West"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83783913300927,
+          19.1268840436697
+        ]
+      },
+      "properties": {
+        "station_name": "Azad Nagar",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#00AEEF",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84882088316151,
+          19.12051733703429
+        ]
+      },
+      "properties": {
+        "station_name": "Andheri",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#00AEEF",
+        "interchange": "Western Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85653266213818,
+          19.11587289181413
+        ]
+      },
+      "properties": {
+        "station_name": "Western Express Highway",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#00AEEF",
+        "interchange": "Line 7 — Gundavali"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86777350124957,
+          19.11200289145861
+        ]
+      },
+      "properties": {
+        "station_name": "Chakala (J.B. Nagar)",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#00AEEF",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87431495142233,
+          19.11015087346307
+        ]
+      },
+      "properties": {
+        "station_name": "Airport Road",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#00AEEF",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87957203456432,
+          19.1080907971696
+        ]
+      },
+      "properties": {
+        "station_name": "Marol Naka",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#00AEEF",
+        "interchange": "Line 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88804351666566,
+          19.10347318402334
+        ]
+      },
+      "properties": {
+        "station_name": "Saki Naka",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#00AEEF",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.89497019841521,
+          19.09634572918786
+        ]
+      },
+      "properties": {
+        "station_name": "Asalpha",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#00AEEF",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.90238402305697,
+          19.09207535548324
+        ]
+      },
+      "properties": {
+        "station_name": "Jagruti Nagar",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#00AEEF",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.90806848421259,
+          19.08678273475152
+        ]
+      },
+      "properties": {
+        "station_name": "Ghatkopar",
+        "line_id": "1",
+        "line_name": "Line 1 (Blue Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#00AEEF",
+        "interchange": "Central Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86697215540136,
+          19.25096576390909
+        ]
+      },
+      "properties": {
+        "station_name": "Dahisar East",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#FFC600",
+        "interchange": "Lines 7 & 9"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86601014006138,
+          19.2572703069864
+        ]
+      },
+      "properties": {
+        "station_name": "Anand Nagar",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85070840198537,
+          19.25661875422936
+        ]
+      },
+      "properties": {
+        "station_name": "Kandarpada",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84571901037624,
+          19.24943296606419
+        ]
+      },
+      "properties": {
+        "station_name": "Mandapeshwar–IC Colony",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84353758595992,
+          19.24038590329955
+        ]
+      },
+      "properties": {
+        "station_name": "Eksar",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84090613776242,
+          19.23140148593459
+        ]
+      },
+      "properties": {
+        "station_name": "Borivali West",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84214064239194,
+          19.22372025859796
+        ]
+      },
+      "properties": {
+        "station_name": "Pahadi Eksar",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83736524506136,
+          19.21398602821516
+        ]
+      },
+      "properties": {
+        "station_name": "Kandivli West",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83478305717374,
+          19.20610319969459
+        ]
+      },
+      "properties": {
+        "station_name": "Dahanukarwadi",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83386178079705,
+          19.19692279792672
+        ]
+      },
+      "properties": {
+        "station_name": "Valnai–Meeth Chowky",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8359066047183,
+          19.18526656459019
+        ]
+      },
+      "properties": {
+        "station_name": "Malad West",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8364591074338,
+          19.17291264195027
+        ]
+      },
+      "properties": {
+        "station_name": "Lower Malad",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83489581697222,
+          19.16236298345489
+        ]
+      },
+      "properties": {
+        "station_name": "Pahadi Goregaon",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83576716787313,
+          19.15320070402559
+        ]
+      },
+      "properties": {
+        "station_name": "Goregaon West",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 14,
+        "stop_sequence": 14,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83395931308715,
+          19.14605357331175
+        ]
+      },
+      "properties": {
+        "station_name": "Oshiwara",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 15,
+        "stop_sequence": 15,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83173792136299,
+          19.1406199423947
+        ]
+      },
+      "properties": {
+        "station_name": "Lower Oshiwara",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 16,
+        "stop_sequence": 16,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83144644948665,
+          19.12914078482039
+        ]
+      },
+      "properties": {
+        "station_name": "Andheri West",
+        "line_id": "2A",
+        "line_name": "Line 2A (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 17,
+        "stop_sequence": 17,
+        "color": "#FFC600",
+        "interchange": "Line 1 — D.N. Nagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9384851904635,
+          19.04961564088568
+        ]
+      },
+      "properties": {
+        "station_name": "Maharashtranagar–Mandale",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.93116908983954,
+          19.04917017701718
+        ]
+      },
+      "properties": {
+        "station_name": "Mankhurd",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#FFC600",
+        "interchange": "Harbour Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.91745873172904,
+          19.04490287763844
+        ]
+      },
+      "properties": {
+        "station_name": "Deonar",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.907059105596,
+          19.04786033734596
+        ]
+      },
+      "properties": {
+        "station_name": "Chhatrapati Shivaji Maharaj Chowk (Chembur)",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.90186403105763,
+          19.05178126378758
+        ]
+      },
+      "properties": {
+        "station_name": "Deshbhakt N.G. Acharya Udyan–Diamond Garden",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.89754881940486,
+          19.06121617462263
+        ]
+      },
+      "properties": {
+        "station_name": "Chembur",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#FFC600",
+        "interchange": "Monorail / Chembur railway vicinity"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88436375290992,
+          19.13110286483764
+        ]
+      },
+      "properties": {
+        "station_name": "Aarey JVLR",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#059DB2",
+        "interchange": "Line 6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87353260558125,
+          19.12574907284021
+        ]
+      },
+      "properties": {
+        "station_name": "SEEPZ",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8738637112993,
+          19.11737065414776
+        ]
+      },
+      "properties": {
+        "station_name": "MIDC–Andheri",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87957203456432,
+          19.1080907971696
+        ]
+      },
+      "properties": {
+        "station_name": "Marol Naka",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#059DB2",
+        "interchange": "Line 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87446849008457,
+          19.10208794823952
+        ]
+      },
+      "properties": {
+        "station_name": "CSMIA–T2",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#059DB2",
+        "interchange": "Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8649307362534,
+          19.10215950650175
+        ]
+      },
+      "properties": {
+        "station_name": "Sahar Road",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85362237599983,
+          19.09390353425054
+        ]
+      },
+      "properties": {
+        "station_name": "CSMIA–T1",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#059DB2",
+        "interchange": "Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8470524398135,
+          19.07891449003876
+        ]
+      },
+      "properties": {
+        "station_name": "Santacruz",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#059DB2",
+        "interchange": "Western Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84949424202658,
+          19.06997402333953
+        ]
+      },
+      "properties": {
+        "station_name": "Bandra Colony",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85493545074947,
+          19.0603703583177
+        ]
+      },
+      "properties": {
+        "station_name": "BKC",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#059DB2",
+        "interchange": "Line 2B — future/adjacent interchange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8500188387187,
+          19.04634474989951
+        ]
+      },
+      "properties": {
+        "station_name": "Dharavi",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84220642631966,
+          19.03831726088469
+        ]
+      },
+      "properties": {
+        "station_name": "Shitladevi Mandir",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83938122320669,
+          19.02368833141648
+        ]
+      },
+      "properties": {
+        "station_name": "Dadar",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#059DB2",
+        "interchange": "Central & Western Railway vicinity"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8307464042342,
+          19.01586917800424
+        ]
+      },
+      "properties": {
+        "station_name": "Siddhivinayak",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 14,
+        "stop_sequence": 14,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81946857556669,
+          19.00866955726723
+        ]
+      },
+      "properties": {
+        "station_name": "Worli",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 15,
+        "stop_sequence": 15,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81823147519542,
+          18.99709828810866
+        ]
+      },
+      "properties": {
+        "station_name": "Acharya Atre Chowk",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 16,
+        "stop_sequence": 16,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82179592034434,
+          18.99029482805959
+        ]
+      },
+      "properties": {
+        "station_name": "Science Centre",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 17,
+        "stop_sequence": 17,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82537736615808,
+          18.97942005348355
+        ]
+      },
+      "properties": {
+        "station_name": "Mahalaxmi",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 18,
+        "stop_sequence": 18,
+        "color": "#059DB2",
+        "interchange": "Western Railway / Monorail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8214674147583,
+          18.97058195511306
+        ]
+      },
+      "properties": {
+        "station_name": "Jagannath Shankar Sheth",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 19,
+        "stop_sequence": 19,
+        "color": "#059DB2",
+        "interchange": "Western Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81806665550043,
+          18.96290158383562
+        ]
+      },
+      "properties": {
+        "station_name": "Grant Road",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 20,
+        "stop_sequence": 20,
+        "color": "#059DB2",
+        "interchange": "Western Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82265586357158,
+          18.95190900177756
+        ]
+      },
+      "properties": {
+        "station_name": "Girgaon",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 21,
+        "stop_sequence": 21,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82701909714018,
+          18.94692519759497
+        ]
+      },
+      "properties": {
+        "station_name": "Kalbadevi",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 22,
+        "stop_sequence": 22,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83223914806152,
+          18.94064539042945
+        ]
+      },
+      "properties": {
+        "station_name": "Chhatrapati Shivaji Maharaj Terminus",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 23,
+        "stop_sequence": 23,
+        "color": "#059DB2",
+        "interchange": "Central/Harbour Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8328493313257,
+          18.9345545941056
+        ]
+      },
+      "properties": {
+        "station_name": "Hutatma Chowk",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 24,
+        "stop_sequence": 24,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82620886971327,
+          18.93058680594325
+        ]
+      },
+      "properties": {
+        "station_name": "Churchgate",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 25,
+        "stop_sequence": 25,
+        "color": "#059DB2",
+        "interchange": "Western Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82572703217737,
+          18.92469932126777
+        ]
+      },
+      "properties": {
+        "station_name": "Vidhan Bhavan",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 26,
+        "stop_sequence": 26,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8202671001224,
+          18.91291418265765
+        ]
+      },
+      "properties": {
+        "station_name": "Cuffe Parade",
+        "line_id": "3",
+        "line_name": "Line 3 (Aqua Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 27,
+        "stop_sequence": 27,
+        "color": "#059DB2",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86420884599791,
+          19.2433129863412
+        ]
+      },
+      "properties": {
+        "station_name": "Ovaripada",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86324132985987,
+          19.23468430605362
+        ]
+      },
+      "properties": {
+        "station_name": "Rashtriya Udyan",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8642874834777,
+          19.224266460582
+        ]
+      },
+      "properties": {
+        "station_name": "Devipada",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86677826900261,
+          19.21716987227736
+        ]
+      },
+      "properties": {
+        "station_name": "Magathane",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8634325381118,
+          19.20387607093375
+        ]
+      },
+      "properties": {
+        "station_name": "Poisar",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86065737988358,
+          19.19822454871459
+        ]
+      },
+      "properties": {
+        "station_name": "Akurli",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85854577460405,
+          19.187143480149
+        ]
+      },
+      "properties": {
+        "station_name": "Kurar",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8583084215705,
+          19.17966110670971
+        ]
+      },
+      "properties": {
+        "station_name": "Dindoshi",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85878815672585,
+          19.16925982103567
+        ]
+      },
+      "properties": {
+        "station_name": "Aarey",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85659397280989,
+          19.15250506232931
+        ]
+      },
+      "properties": {
+        "station_name": "Goregaon East",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85514588881632,
+          19.14280644208631
+        ]
+      },
+      "properties": {
+        "station_name": "Jogeshwari East",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85540956357384,
+          19.12870790528584
+        ]
+      },
+      "properties": {
+        "station_name": "Mogra",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85518238458401,
+          19.11483166204312
+        ]
+      },
+      "properties": {
+        "station_name": "Gundavali",
+        "line_id": "7",
+        "line_name": "Line 7 (Red Line)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#D83431",
+        "interchange": "Line 1 — WEH"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86697215540136,
+          19.25096576390909
+        ]
+      },
+      "properties": {
+        "station_name": "Dahisar East",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#D83431",
+        "interchange": "Lines 2A & 7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8725892945066,
+          19.2597987019458
+        ]
+      },
+      "properties": {
+        "station_name": "Pandurang Wadi",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88070121318611,
+          19.27102115816425
+        ]
+      },
+      "properties": {
+        "station_name": "Miragaon",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#D83431",
+        "interchange": "Line 10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88026560932819,
+          19.27772302062882
+        ]
+      },
+      "properties": {
+        "station_name": "Kashigaon",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "operational",
+        "is_operational": true,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83684751028873,
+          19.10709981847491
+        ]
+      },
+      "properties": {
+        "station_name": "ESIC Nagar",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83711887642328,
+          19.10934135204122
+        ]
+      },
+      "properties": {
+        "station_name": "Prem Nagar",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83795530740679,
+          19.08193059428232
+        ]
+      },
+      "properties": {
+        "station_name": "Indira Nagar",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83964251242178,
+          19.09547515902744
+        ]
+      },
+      "properties": {
+        "station_name": "Nanavati Hospital",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83795530740679,
+          19.08193059428232
+        ]
+      },
+      "properties": {
+        "station_name": "Khira Nagar",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#FFC600",
+        "interchange": "Western Railway vicinity"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83758441767634,
+          19.07310457278214
+        ]
+      },
+      "properties": {
+        "station_name": "Saraswat Nagar",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83807219489596,
+          19.05331007437601
+        ]
+      },
+      "properties": {
+        "station_name": "Bandra Metro",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#FFC600",
+        "interchange": "Western Railway / Bandra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85306477620512,
+          19.05760836124713
+        ]
+      },
+      "properties": {
+        "station_name": "Income Tax Office",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 14,
+        "stop_sequence": 14,
+        "color": "#FFC600",
+        "interchange": "Line 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86322891848047,
+          19.06586311835968
+        ]
+      },
+      "properties": {
+        "station_name": "ILFS",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 15,
+        "stop_sequence": 15,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8698784140361,
+          19.0699897603942
+        ]
+      },
+      "properties": {
+        "station_name": "MTNL Metro",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 16,
+        "stop_sequence": 16,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88137578362517,
+          19.07366064133724
+        ]
+      },
+      "properties": {
+        "station_name": "SG Barve Marg",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 17,
+        "stop_sequence": 17,
+        "color": "#FFC600",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88674982725216,
+          19.0655249564488
+        ]
+      },
+      "properties": {
+        "station_name": "Kurla East",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 18,
+        "stop_sequence": 18,
+        "color": "#FFC600",
+        "interchange": "Central Railway / Line 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88835080334974,
+          19.05555282704095
+        ]
+      },
+      "properties": {
+        "station_name": "EEH",
+        "line_id": "2B",
+        "line_name": "Line 2B (Yellow Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 19,
+        "stop_sequence": 19,
+        "color": "#FFC600",
+        "interchange": "Eastern Express Highway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87761445297818,
+          19.02902397969962
+        ]
+      },
+      "properties": {
+        "station_name": "Bhakti Park Metro",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#00AE5A",
+        "interchange": "Mumbai Monorail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88021844706071,
+          19.03800846786315
+        ]
+      },
+      "properties": {
+        "station_name": "Wadala TT",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#00AE5A",
+        "interchange": "Monorail / Wadala"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87859054446277,
+          19.04618423629103
+        ]
+      },
+      "properties": {
+        "station_name": "Anik Nagar Bus Depot",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#00AE5A",
+        "interchange": "Monorail vicinity"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8869899452078,
+          19.05616915793664
+        ]
+      },
+      "properties": {
+        "station_name": "Siddharth Colony",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.06450285130839,
+          19.29454385680239
+        ]
+      },
+      "properties": {
+        "station_name": "Garodia Nagar",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.90239653828819,
+          19.07264676887522
+        ]
+      },
+      "properties": {
+        "station_name": "Pant Nagar",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86177612882155,
+          19.13930501204223
+        ]
+      },
+      "properties": {
+        "station_name": "Laxmi Nagar",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9166487553176,
+          19.09816172877733
+        ]
+      },
+      "properties": {
+        "station_name": "Shreyas Cinema",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.92085466054316,
+          19.10355027053591
+        ]
+      },
+      "properties": {
+        "station_name": "Godrej Company",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.92451653570018,
+          19.10889183856102
+        ]
+      },
+      "properties": {
+        "station_name": "Vikhroli Metro",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.92618517519448,
+          19.1177402532532
+        ]
+      },
+      "properties": {
+        "station_name": "Surya Nagar",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86601014006138,
+          19.2572703069864
+        ]
+      },
+      "properties": {
+        "station_name": "Gandhi Nagar",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#00AE5A",
+        "interchange": "Line 6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.92765854966395,
+          19.13275032958094
+        ]
+      },
+      "properties": {
+        "station_name": "Naval Housing",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.93082420708474,
+          19.13878602638751
+        ]
+      },
+      "properties": {
+        "station_name": "Bhandup Mahapalika",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 14,
+        "stop_sequence": 14,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83807219489596,
+          19.05331007437601
+        ]
+      },
+      "properties": {
+        "station_name": "Bhandup Metro",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 15,
+        "stop_sequence": 15,
+        "color": "#00AE5A",
+        "interchange": "Central Railway vicinity"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.93760238047996,
+          19.15349924155596
+        ]
+      },
+      "properties": {
+        "station_name": "Shangrila",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 16,
+        "stop_sequence": 16,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9384304115873,
+          19.16617918187702
+        ]
+      },
+      "properties": {
+        "station_name": "Sonapur",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 17,
+        "stop_sequence": 17,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.94248398155987,
+          19.17558277954505
+        ]
+      },
+      "properties": {
+        "station_name": "Mulund Fire Station",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 18,
+        "stop_sequence": 18,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.95086463482822,
+          19.1834707354214
+        ]
+      },
+      "properties": {
+        "station_name": "Mulund Naka",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 19,
+        "stop_sequence": 19,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.96165426290756,
+          19.18712946282468
+        ]
+      },
+      "properties": {
+        "station_name": "Thane Teen Haath Naka",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 20,
+        "stop_sequence": 20,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.96268005256331,
+          19.19332569748404
+        ]
+      },
+      "properties": {
+        "station_name": "RTO Thane",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 21,
+        "stop_sequence": 21,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9648983685196,
+          19.2011033333615
+        ]
+      },
+      "properties": {
+        "station_name": "Mahapalika Marg",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 22,
+        "stop_sequence": 22,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97023532375533,
+          19.2061845123663
+        ]
+      },
+      "properties": {
+        "station_name": "Cadbury Junction",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 23,
+        "stop_sequence": 23,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97571820185888,
+          19.21150135567898
+        ]
+      },
+      "properties": {
+        "station_name": "Majiwada",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 24,
+        "stop_sequence": 24,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97746251201916,
+          19.22425309110192
+        ]
+      },
+      "properties": {
+        "station_name": "Kapurbawdi",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 25,
+        "stop_sequence": 25,
+        "color": "#00AE5A",
+        "interchange": "Line 5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97657746736199,
+          19.23134894899139
+        ]
+      },
+      "properties": {
+        "station_name": "Manpada",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 26,
+        "stop_sequence": 26,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97559882738884,
+          19.23813103726435
+        ]
+      },
+      "properties": {
+        "station_name": "Tikuji-Ni-Wadi",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 27,
+        "stop_sequence": 27,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97425923479562,
+          19.24901196366643
+        ]
+      },
+      "properties": {
+        "station_name": "Dongari Pada",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 28,
+        "stop_sequence": 28,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97004313696883,
+          19.25888054924925
+        ]
+      },
+      "properties": {
+        "station_name": "Vijay Garden",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 29,
+        "stop_sequence": 29,
+        "color": "#00AE5A",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.96666388988234,
+          19.26752298344503
+        ]
+      },
+      "properties": {
+        "station_name": "Kasarvadavali",
+        "line_id": "4",
+        "line_name": "Line 4 (Green Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 30,
+        "stop_sequence": 30,
+        "color": "#00AE5A",
+        "interchange": "Line 4A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.96666388988234,
+          19.26752298344503
+        ]
+      },
+      "properties": {
+        "station_name": "Kasarvadavali",
+        "line_id": "4A",
+        "line_name": "Line 4A (Green Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#00AE5A",
+        "interchange": "Line 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9475209319203,
+          19.28449521854706
+        ]
+      },
+      "properties": {
+        "station_name": "Gaimukh",
+        "line_id": "4A",
+        "line_name": "Line 4A (Green Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#00AE5A",
+        "interchange": "Line 10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.98791493242292,
+          19.22056884792736
+        ]
+      },
+      "properties": {
+        "station_name": "Balkum Naka",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.01637545090779,
+          19.23981242722836
+        ]
+      },
+      "properties": {
+        "station_name": "Kasheli",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.02279613512636,
+          19.25400679129653
+        ]
+      },
+      "properties": {
+        "station_name": "Kalher",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.02784560511391,
+          19.25975966744736
+        ]
+      },
+      "properties": {
+        "station_name": "Purna",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.04300117216435,
+          19.27459850795742
+        ]
+      },
+      "properties": {
+        "station_name": "Anjurphata",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.05241701066458,
+          19.2858411610298
+        ]
+      },
+      "properties": {
+        "station_name": "Dhamankar Naka",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.05998755835084,
+          19.29336493090482
+        ]
+      },
+      "properties": {
+        "station_name": "Bhiwandi",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.06450285130839,
+          19.29454385680239
+        ]
+      },
+      "properties": {
+        "station_name": "Gopal Nagar",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.07417285453853,
+          19.28166344587251
+        ]
+      },
+      "properties": {
+        "station_name": "Temghar",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.08405620885796,
+          19.26861174541445
+        ]
+      },
+      "properties": {
+        "station_name": "Rajnoli",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09013475359514,
+          19.26166859527566
+        ]
+      },
+      "properties": {
+        "station_name": "Gove Gaon",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.10645008105604,
+          19.2480497843621
+        ]
+      },
+      "properties": {
+        "station_name": "Kon Gaon",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.12839215070757,
+          19.24480506702529
+        ]
+      },
+      "properties": {
+        "station_name": "Lal Chowki",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.12758609303592,
+          19.23883725129479
+        ]
+      },
+      "properties": {
+        "station_name": "Kalyan Station",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 14,
+        "stop_sequence": 14,
+        "color": "#FF8200",
+        "interchange": "Central Railway / Line 12"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.12234376068747,
+          19.23508866022033
+        ]
+      },
+      "properties": {
+        "station_name": "Kalyan APMC",
+        "line_id": "5",
+        "line_name": "Line 5 (Orange Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 15,
+        "stop_sequence": 15,
+        "color": "#FF8200",
+        "interchange": "Line 12"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8271988215877,
+          19.14069046527636
+        ]
+      },
+      "properties": {
+        "station_name": "Swami Samarth Nagar",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#F99FC9",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83374352409481,
+          19.14189141773432
+        ]
+      },
+      "properties": {
+        "station_name": "Adarsh Nagar",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#F99FC9",
+        "interchange": "Line 2A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84135333048377,
+          19.14030189544254
+        ]
+      },
+      "properties": {
+        "station_name": "Jogeshwari West",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#F99FC9",
+        "interchange": "Western Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8529685510287,
+          19.13991916457345
+        ]
+      },
+      "properties": {
+        "station_name": "JVLR",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#F99FC9",
+        "interchange": "Line 7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86177612882155,
+          19.13930501204223
+        ]
+      },
+      "properties": {
+        "station_name": "Shyam Nagar",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#F99FC9",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87400136301126,
+          19.13560487320147
+        ]
+      },
+      "properties": {
+        "station_name": "Mahakali Caves",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#F99FC9",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88240991589801,
+          19.12947377259693
+        ]
+      },
+      "properties": {
+        "station_name": "SEEPZ Village",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#F99FC9",
+        "interchange": "Line 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88979005832576,
+          19.12668549862065
+        ]
+      },
+      "properties": {
+        "station_name": "Saki Vihar Road",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#F99FC9",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.89895452881984,
+          19.12186535562067
+        ]
+      },
+      "properties": {
+        "station_name": "Rambaug",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#F99FC9",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.90601765443597,
+          19.12011661025658
+        ]
+      },
+      "properties": {
+        "station_name": "Powai Lake",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#F99FC9",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.91377436792733,
+          19.12426122795075
+        ]
+      },
+      "properties": {
+        "station_name": "IIT, Powai",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#F99FC9",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9245210067276,
+          19.12555149043348
+        ]
+      },
+      "properties": {
+        "station_name": "Kanjur Marg West",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#F99FC9",
+        "interchange": "Line 4 / Central Railway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.93520464616564,
+          19.1248780113486
+        ]
+      },
+      "properties": {
+        "station_name": "Vikhroli (EEH)",
+        "line_id": "6",
+        "line_name": "Line 6 (Pink Line)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#F99FC9",
+        "interchange": "Eastern Express Highway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85408039977223,
+          19.10588835945292
+        ]
+      },
+      "properties": {
+        "station_name": "Airport Colony",
+        "line_id": "7A",
+        "line_name": "Line 7A (Red Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#D83431",
+        "interchange": "Line 7 / WEH area"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87446849008457,
+          19.10208794823952
+        ]
+      },
+      "properties": {
+        "station_name": "CSIA",
+        "line_id": "7A",
+        "line_name": "Line 7A (Red Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#D83431",
+        "interchange": "Line 3 / airport network"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87101662753071,
+          19.28447848971463
+        ]
+      },
+      "properties": {
+        "station_name": "Sai Baba Nagar",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86008687782892,
+          19.29395472365761
+        ]
+      },
+      "properties": {
+        "station_name": "Meditiya Nagar",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8494063174249,
+          19.29493042904111
+        ]
+      },
+      "properties": {
+        "station_name": "Shahid Bhagat Singh Garden",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84349424031727,
+          19.29433675869909
+        ]
+      },
+      "properties": {
+        "station_name": "Subhash Chandra Bose Stadium",
+        "line_id": "9",
+        "line_name": "Line 9 (Red Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#D83431",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.12758609303592,
+          19.23883725129479
+        ]
+      },
+      "properties": {
+        "station_name": "Kalyan",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 1,
+        "stop_sequence": 1,
+        "color": "#FF8200",
+        "interchange": "Central Railway / Line 5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.12234376068747,
+          19.23508866022033
+        ]
+      },
+      "properties": {
+        "station_name": "Kalyan APMC",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 2,
+        "stop_sequence": 2,
+        "color": "#FF8200",
+        "interchange": "Line 5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.12265191386014,
+          19.22886189948652
+        ]
+      },
+      "properties": {
+        "station_name": "Ganesh Nagar",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 3,
+        "stop_sequence": 3,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.11905869525421,
+          19.21806884262222
+        ]
+      },
+      "properties": {
+        "station_name": "Pisavali Gaon",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 4,
+        "stop_sequence": 4,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.11133193884831,
+          19.20932589116082
+        ]
+      },
+      "properties": {
+        "station_name": "Golavali",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 5,
+        "stop_sequence": 5,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.10368547324806,
+          19.20165383204235
+        ]
+      },
+      "properties": {
+        "station_name": "Dombivli MIDC",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 6,
+        "stop_sequence": 6,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09866166680868,
+          19.19613926303781
+        ]
+      },
+      "properties": {
+        "station_name": "Sagaon",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 7,
+        "stop_sequence": 7,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09133240704642,
+          19.18602262420152
+        ]
+      },
+      "properties": {
+        "station_name": "Sonarpada",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 8,
+        "stop_sequence": 8,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.97657746736199,
+          19.23134894899139
+        ]
+      },
+      "properties": {
+        "station_name": "Manpada",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 9,
+        "stop_sequence": 9,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0943323652682,
+          19.170598897856
+        ]
+      },
+      "properties": {
+        "station_name": "Hedutane",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 10,
+        "stop_sequence": 10,
+        "color": "#FF8200",
+        "interchange": "Line 14 (planned)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0900790647102,
+          19.16282107455977
+        ]
+      },
+      "properties": {
+        "station_name": "Kolegaon",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 11,
+        "stop_sequence": 11,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0814716932165,
+          19.15409329527039
+        ]
+      },
+      "properties": {
+        "station_name": "Nilje Gaon",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 12,
+        "stop_sequence": 12,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09096658029536,
+          19.14378305887745
+        ]
+      },
+      "properties": {
+        "station_name": "Vadavali",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 13,
+        "stop_sequence": 13,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09412848496059,
+          19.13088491825262
+        ]
+      },
+      "properties": {
+        "station_name": "Bale",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 14,
+        "stop_sequence": 14,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09692441827876,
+          19.11941718671349
+        ]
+      },
+      "properties": {
+        "station_name": "Waklan",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 15,
+        "stop_sequence": 15,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09650949132106,
+          19.10832652750937
+        ]
+      },
+      "properties": {
+        "station_name": "Turbhe",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 16,
+        "stop_sequence": 16,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.09139657656343,
+          19.09997192331655
+        ]
+      },
+      "properties": {
+        "station_name": "Pisave Depot",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 17,
+        "stop_sequence": 17,
+        "color": "#FF8200",
+        "interchange": "Depot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.08640797429933,
+          19.09226646043312
+        ]
+      },
+      "properties": {
+        "station_name": "Pisave",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 18,
+        "stop_sequence": 18,
+        "color": "#FF8200",
+        "interchange": "—"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.08181242240262,
+          19.07372655437538
+        ]
+      },
+      "properties": {
+        "station_name": "Amandoot / Taloja",
+        "line_id": "12",
+        "line_name": "Line 12 (Orange Line Extension)",
+        "status": "under_construction",
+        "is_operational": false,
+        "sequence": 19,
+        "stop_sequence": 19,
+        "color": "#FF8200",
+        "interchange": "Navi Mumbai Metro Line 1"
+      }
+    }
+  ]
+}

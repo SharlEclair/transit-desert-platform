@@ -1,0 +1,2487 @@
+{
+  "summary": {
+    "total_target_station_records": 177,
+    "total_unique_target_stations": 172,
+    "matched_unique_stations": 172,
+    "unmatched_stations_count": 0,
+    "kml_file_used": "data/mumbai/raw/metro_network/Mumbai Metro v3.kml"
+  },
+  "mapping": {
+    "Versova": "वर्सोवा, Versova",
+    "D.N. Nagar": "D N Nagar, डी.एन. नगर",
+    "Azad Nagar": "Azad Nagar. आझाद नगर",
+    "Andheri": "अंधेरी, Andheri",
+    "Western Express Highway": "Western Exp Highway, पश्चिम द्रुतगती महामार्ग",
+    "Chakala (J.B. Nagar)": "Chakala / JB Nagar,\nचकाला (जे.बी.नगर) स्टेशन",
+    "Airport Road": "Airport Road,\nविमानतळ रस्ता",
+    "Marol Naka": "Marol Naka,\nमरोळ नाका",
+    "Saki Naka": "Saki Naka,\nसाकीनाका",
+    "Asalpha": "Asalpha, असल्फा",
+    "Jagruti Nagar": "Jagruti Nagar, जागृती नगर",
+    "Ghatkopar": "घाटकोपर, Ghatkopar",
+    "Dahisar East": "दहिसर (पूर्व), Dahisar (East)",
+    "Anand Nagar": "Anand Nagar, आनंद नगर",
+    "Kandarpada": "Kandarpada, कांदरपाडा",
+    "Mandapeshwar–IC Colony": "Mandapeshwar, मंडपेश्वर",
+    "Eksar": "Eksar, एकसर",
+    "Borivali West": "बोरीवली (पश्चिम), Borivali (West)",
+    "Pahadi Eksar": "Shimpoli, शिंपोली",
+    "Kandivli West": "कांदिवली (पश्चिम), Kandivali (West)",
+    "Dahanukarwadi": "Dahanukarwadi, डहाणूकरवाडी",
+    "Valnai–Meeth Chowky": "Valnai–Meeth Chowky, वळनई–मीठ चौकी",
+    "Malad West": "मालाड (पश्चिम), Malad (West)",
+    "Lower Malad": "Lower Malad, लोअर मालाड",
+    "Pahadi Goregaon": "Bangur Nagar, बांगूर नगर",
+    "Goregaon West": "गोरेगाव (पश्चिम), Goregaon (West)",
+    "Oshiwara": "Oshiwara, ओशिवरा",
+    "Lower Oshiwara": "Lower Oshiwara,\tलोअर ओशिवरा",
+    "Andheri West": "अंधेरी (पश्चिम), Andheri (West)",
+    "Maharashtranagar–Mandale": "37\tMandale, मंडाले",
+    "Mankhurd": "36\tमानखुर्द, Mankhurd",
+    "Deonar": "35\tDeonar, देवनार",
+    "Chhatrapati Shivaji Maharaj Chowk (Chembur)": "34\tShivaji Chowk (Chembur), शिवाजी चौक (चेंबूर)",
+    "Deshbhakt N.G. Acharya Udyan–Diamond Garden": "33\tDiamond Garden, डायमंड गार्डन",
+    "Chembur": "चेंबूर, Chembur",
+    "Aarey JVLR": "Aarey JVLR, आरे जे.व्ही.एल.आर.",
+    "SEEPZ": "SEEPZ, सीप्झ",
+    "MIDC–Andheri": "MIDC - Andheri, एम.आय.डी.सी. - अंधेरी",
+    "CSMIA–T2": "Chhatrapati Shivaji Maharaj International Airport - T2, छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळ - टी२",
+    "Sahar Road": "Sahar Road, सहार रोड",
+    "CSMIA–T1": "Chhatrapati Shivaji Maharaj International Airport - T1, छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळ - टी१",
+    "Santacruz": "सांताक्रुझ, Santacruz",
+    "Bandra Colony": "Bandra Colony, वांद्रे वसाहत",
+    "BKC": "Bandra Kurla Complex, वांद्रे कुर्ला संकुल",
+    "Dharavi": "धारावी, Dharavi",
+    "Shitladevi Mandir": "Shitaladevi Mandir, शितलादेवी मंदिर",
+    "Dadar": "दादर, Dadar",
+    "Siddhivinayak": "सिद्धिविनायक, Siddhivinayak",
+    "Worli": "वरळी, Worli",
+    "Acharya Atre Chowk": "Acharya Atre Chowk, आचार्य अत्रे चौक",
+    "Science Centre": "Science Centre, विज्ञान केंद्र",
+    "Mahalaxmi": "महालक्ष्मी, Mahalaxmi",
+    "Jagannath Shankar Sheth": "Jagannath Shankar Sheth, जगन्नाथ शंकरशेठ",
+    "Grant Road": "ग्रँट रोड, Grant Road",
+    "Girgaon": "गिरगाव, Girgaon",
+    "Kalbadevi": "काळबादेवी, Kalbadevi",
+    "Chhatrapati Shivaji Maharaj Terminus": "Chhatrapati Shivaji Maharaj Terminus, छत्रपती शिवाजी महाराज टर्मिनस",
+    "Hutatma Chowk": "Hutatma Chowk, हुतात्मा चौक",
+    "Churchgate": "चर्चगेट, Churchgate",
+    "Vidhan Bhavan": "Vidhan Bhavan, विधान भवन",
+    "Cuffe Parade": "Cuffe Parade, कफ परेड",
+    "Ovaripada": "Ovaripada, ओवरीपाडा",
+    "Rashtriya Udyan": "Rashtriya Udyan, राष्ट्रीय उद्यान",
+    "Devipada": "Devipada, देवीपाडा",
+    "Magathane": "Magathane, मागाठाणे",
+    "Poisar": "Poisar, पोईसर",
+    "Akurli": "Akurli, आकुर्ली",
+    "Kurar": "Kurar, कुरार",
+    "Dindoshi": "दिंडोशी, Dindoshi",
+    "Aarey": "आरे, Aarey",
+    "Goregaon East": "गोरेगाव (पूर्व), Goregaon(East)",
+    "Jogeshwari East": "जोगेश्वरी (पूर्व), Jogeshwari (East)",
+    "Mogra": "Mogra, मोगरा",
+    "Gundavali": "Gundavali, गुंदवली",
+    "Pandurang Wadi": "Pandurang Wadi, पांडुरंग वाडी",
+    "Miragaon": "Miragaon, मिरागाव",
+    "Kashigaon": "Kashigaon, काशिगाव",
+    "ESIC Nagar": "ESIC Nagar, का.रा.वि.म. नगर",
+    "Prem Nagar": "Prem Nagar, प्रेम नगर",
+    "Indira Nagar": "Khira Nagar, खिरा नगर",
+    "Nanavati Hospital": "Nanavati Hospital, नानावटी रुग्णालय",
+    "Khira Nagar": "Khira Nagar, खिरा नगर",
+    "Saraswat Nagar": "Saraswat Nagar, सारस्वत नगर",
+    "Bandra Metro": "Bandra Metro",
+    "Income Tax Office": "Income Tax Office",
+    "ILFS": "ILFS",
+    "MTNL Metro": "MTNL Metro",
+    "SG Barve Marg": "SG Barve Marg",
+    "Kurla East": "Kurla East",
+    "EEH": "EEH",
+    "Bhakti Park Metro": "Bhakti Park, भक्ती पार्क",
+    "Wadala TT": "Wadala Truck Terminal, वडाळा ट्रक टर्मिनल",
+    "Anik Nagar Bus Depot": "Anik Nagar Bus Depot, आणिक नगर बस आगार",
+    "Siddharth Colony": "Siddharth Colony, सिद्धार्थ कॉलनी",
+    "Garodia Nagar": "Gopal Nagar, गोपाळ नगर",
+    "Pant Nagar": "Pant Nagar, पंत नगर",
+    "Laxmi Nagar": "Shyam Nagar, श्याम नगर",
+    "Shreyas Cinema": "Shreyas Cinema, श्रेयस सिनेमा",
+    "Godrej Company": "Godrej Company, गोदरेज कंपनी",
+    "Vikhroli Metro": "विक्रोळी, Vikhroli",
+    "Surya Nagar": "Surya Nagar, सूर्य नगर",
+    "Gandhi Nagar": "Anand Nagar, आनंद नगर",
+    "Naval Housing": "Naval Housing, नौदल गृहनिर्माण",
+    "Bhandup Mahapalika": "Bhandup Mahapalika, भांडुप महापालिका",
+    "Bhandup Metro": "Bandra Metro",
+    "Shangrila": "Shangrila, शांग्रीला",
+    "Sonapur": "सोनापूर, Sonapur",
+    "Mulund Fire Station": "Mulund Fire Station, मुलुंड अग्निशमन केंद्र",
+    "Mulund Naka": "Mulund Naka, मुलुंड नाका",
+    "Thane Teen Haath Naka": "Teen Haath Naka (Thane), तीन हात नाका (ठाणे)",
+    "RTO Thane": "RTO Thane, आरटीओ ठाणे",
+    "Mahapalika Marg": "Mahapalika Marg, महापालिका मार्ग",
+    "Cadbury Junction": "Cadbury Junction, कॅडबरी जंक्शन",
+    "Majiwada": "माजिवडा, Majiwada",
+    "Kapurbawdi": "Kapurbawdi, कापूरबावडी",
+    "Manpada": "मानपाडा, Manpada",
+    "Tikuji-Ni-Wadi": "Tikuji-ni-wadi, टिकूजी-नी-वाडी",
+    "Dongari Pada": "Dongripada, डोंगरीपाडा",
+    "Vijay Garden": "Vijay Garden, विजय गार्डन",
+    "Kasarvadavali": "कासारवडवली, Kasarvadavali",
+    "Gaimukh": "Gaimukh, गायमुख",
+    "Balkum Naka": "Balkum Naka, बाळकुम नाका",
+    "Kasheli": "Kasheli, कशेळी",
+    "Kalher": "Kalher, काल्हेर",
+    "Purna": "Purna, पूर्णा",
+    "Anjurphata": "Anjur Phata, अंजूर फाटा",
+    "Dhamankar Naka": "Dhamankar Naka, धामणकर नाका",
+    "Bhiwandi": "भिवंडी, Bhiwandi",
+    "Gopal Nagar": "Gopal Nagar, गोपाळ नगर",
+    "Temghar": "Temghar, टेमघर",
+    "Rajnoli": "Rajnouli Village, रांजणोली गाव",
+    "Gove Gaon": "Govegaon MIDC, गोवेगाव एमआयडीसी",
+    "Kon Gaon": "Kongaon, कोनगाव",
+    "Lal Chowki": "Sahajanand Chowk, सहजानंद चौक",
+    "Kalyan Station": "Kalyan Railway Station, कल्याण रेल्वे स्थानक",
+    "Kalyan APMC": "Kalyan APMC, कल्याण एपीएमसी",
+    "Swami Samarth Nagar": "Swami Samarth Nagar (Lokhandwala), स्वामी समर्थ नगर (लोखंडवाला)",
+    "Adarsh Nagar": "Adarsh Nagar, आदर्श नगर",
+    "Jogeshwari West": "जोगेश्वरी (पश्चिम), Jogeshwari (West)",
+    "JVLR": "JVLR Junction, जेवीएलआर जंक्शन",
+    "Shyam Nagar": "Shyam Nagar, श्याम नगर",
+    "Mahakali Caves": "Mahakali Caves, महाकाली लेणी",
+    "SEEPZ Village": "SEEPZ Village, सीप्झ गाव",
+    "Saki Vihar Road": "Saki Vihar Road, साकी विहार रोड",
+    "Rambaug": "Rambaug (Powai), रामबाग (पवई)",
+    "Powai Lake": "Powai Lake, पवई तलाव",
+    "IIT, Powai": "IIT Powai, आयआयटी पवई",
+    "Kanjur Marg West": "कांजूरमार्ग (पश्चिम), Kanjurmarg (West)",
+    "Vikhroli (EEH)": "Vikhroli EEH, विक्रोळी इइएच",
+    "Airport Colony": "Airport Colony, विमानतळ वसाहत",
+    "CSIA": "Chhatrapati Shivaji Maharaj International Airport - T2, छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळ - टी२",
+    "Sai Baba Nagar": "Sai Baba Nagar, साई बाबा नगर",
+    "Meditiya Nagar": "Deepak Hospital (Medtiya Nagar), दीपक हॉस्पिटल (मेडतिया नगर)",
+    "Shahid Bhagat Singh Garden": "Shahid Bhagat Singh Garden, शहीद भगतसिंग गार्डन",
+    "Subhash Chandra Bose Stadium": "Subhash Chandra Bose Stadium, सुभाषचंद्र बोस स्टेडियम",
+    "Kalyan": "Kalyan Railway Station, कल्याण रेल्वे स्थानक",
+    "Ganesh Nagar": "Ganesh Nagar (Kalyan), गणेश नगर (कल्याण)",
+    "Pisavali Gaon": "पिसवली गाव, Pisavali Gaon",
+    "Golavali": "गोळवली, Golavali",
+    "Dombivli MIDC": "Dombivali MIDC, डोंबिवली एमआयडीसी",
+    "Sagaon": "सागाव, Sagaon",
+    "Sonarpada": "सोनारपाडा, Sonarpada",
+    "Hedutane": "हेदुटणे, Hedutane",
+    "Kolegaon": "कोळेगाव, Kolegaon",
+    "Nilje Gaon": "निळजे गाव, Nilaje Gaon",
+    "Vadavali": "वडवली, Vadavali",
+    "Bale": "बाळे, Bale",
+    "Waklan": "वाकळण, Waklan",
+    "Turbhe": "तुर्भे, Turbhe",
+    "Pisave Depot": "Pisarve Depot, पिसार्वे आगार",
+    "Pisave": "पिसार्वे, Pisarve",
+    "Amandoot / Taloja": "Amandoot, अमनदूत"
+  },
+  "detailed_stations": [
+    {
+      "official_name": "Versova",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "वर्सोवा, Versova",
+      "cleaned_kml_name": "Versova",
+      "coordinates": [
+        72.82153545939327,
+        19.13029733503171
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "D.N. Nagar",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "D N Nagar, डी.एन. नगर",
+      "cleaned_kml_name": "D N Nagar",
+      "coordinates": [
+        72.83041705316391,
+        19.12828091261969
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Azad Nagar",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Azad Nagar. आझाद नगर",
+      "cleaned_kml_name": "Azad Nagar",
+      "coordinates": [
+        72.83783913300927,
+        19.1268840436697
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Andheri",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "अंधेरी, Andheri",
+      "cleaned_kml_name": "Andheri",
+      "coordinates": [
+        72.84882088316151,
+        19.12051733703429
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Western Express Highway",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Western Exp Highway, पश्चिम द्रुतगती महामार्ग",
+      "cleaned_kml_name": "Western Exp Highway",
+      "coordinates": [
+        72.85653266213818,
+        19.11587289181413
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Chakala (J.B. Nagar)",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Chakala / JB Nagar,\nचकाला (जे.बी.नगर) स्टेशन",
+      "cleaned_kml_name": "Chakala JB Nagar",
+      "coordinates": [
+        72.86777350124957,
+        19.11200289145861
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Airport Road",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Airport Road,\nविमानतळ रस्ता",
+      "cleaned_kml_name": "Airport Road",
+      "coordinates": [
+        72.87431495142233,
+        19.11015087346307
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Marol Naka",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Marol Naka,\nमरोळ नाका",
+      "cleaned_kml_name": "Marol Naka",
+      "coordinates": [
+        72.87957203456432,
+        19.1080907971696
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Saki Naka",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Saki Naka,\nसाकीनाका",
+      "cleaned_kml_name": "Saki Naka",
+      "coordinates": [
+        72.88804351666566,
+        19.10347318402334
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Asalpha",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Asalpha, असल्फा",
+      "cleaned_kml_name": "Asalpha",
+      "coordinates": [
+        72.89497019841521,
+        19.09634572918786
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Jagruti Nagar",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "Jagruti Nagar, जागृती नगर",
+      "cleaned_kml_name": "Jagruti Nagar",
+      "coordinates": [
+        72.90238402305697,
+        19.09207535548324
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Ghatkopar",
+      "line_id": "1",
+      "line_name": "Blue Line",
+      "status": "operational",
+      "kml_name": "घाटकोपर, Ghatkopar",
+      "cleaned_kml_name": "Ghatkopar",
+      "coordinates": [
+        72.90806848421259,
+        19.08678273475152
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dahisar East",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "दहिसर (पूर्व), Dahisar (East)",
+      "cleaned_kml_name": "Dahisar East",
+      "coordinates": [
+        72.86697215540136,
+        19.25096576390909
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Anand Nagar",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Anand Nagar, आनंद नगर",
+      "cleaned_kml_name": "Anand Nagar",
+      "coordinates": [
+        72.86601014006138,
+        19.2572703069864
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kandarpada",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Kandarpada, कांदरपाडा",
+      "cleaned_kml_name": "Kandarpada",
+      "coordinates": [
+        72.85070840198537,
+        19.25661875422936
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mandapeshwar–IC Colony",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Mandapeshwar, मंडपेश्वर",
+      "cleaned_kml_name": "Mandapeshwar",
+      "coordinates": [
+        72.84571901037624,
+        19.24943296606419
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Eksar",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Eksar, एकसर",
+      "cleaned_kml_name": "Eksar",
+      "coordinates": [
+        72.84353758595992,
+        19.24038590329955
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Borivali West",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "बोरीवली (पश्चिम), Borivali (West)",
+      "cleaned_kml_name": "Borivali West",
+      "coordinates": [
+        72.84090613776242,
+        19.23140148593459
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Pahadi Eksar",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Shimpoli, शिंपोली",
+      "cleaned_kml_name": "Shimpoli",
+      "coordinates": [
+        72.84214064239194,
+        19.22372025859796
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kandivli West",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "कांदिवली (पश्चिम), Kandivali (West)",
+      "cleaned_kml_name": "Kandivali West",
+      "coordinates": [
+        72.83736524506136,
+        19.21398602821516
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dahanukarwadi",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Dahanukarwadi, डहाणूकरवाडी",
+      "cleaned_kml_name": "Dahanukarwadi",
+      "coordinates": [
+        72.83478305717374,
+        19.20610319969459
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Valnai–Meeth Chowky",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Valnai–Meeth Chowky, वळनई–मीठ चौकी",
+      "cleaned_kml_name": "Valnai Meeth Chowky",
+      "coordinates": [
+        72.83386178079705,
+        19.19692279792672
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Malad West",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "मालाड (पश्चिम), Malad (West)",
+      "cleaned_kml_name": "Malad West",
+      "coordinates": [
+        72.8359066047183,
+        19.18526656459019
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Lower Malad",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Lower Malad, लोअर मालाड",
+      "cleaned_kml_name": "Lower Malad",
+      "coordinates": [
+        72.8364591074338,
+        19.17291264195027
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Pahadi Goregaon",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Bangur Nagar, बांगूर नगर",
+      "cleaned_kml_name": "Bangur Nagar",
+      "coordinates": [
+        72.83489581697222,
+        19.16236298345489
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Goregaon West",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "गोरेगाव (पश्चिम), Goregaon (West)",
+      "cleaned_kml_name": "Goregaon West",
+      "coordinates": [
+        72.83576716787313,
+        19.15320070402559
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Oshiwara",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Oshiwara, ओशिवरा",
+      "cleaned_kml_name": "Oshiwara",
+      "coordinates": [
+        72.83395931308715,
+        19.14605357331175
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Lower Oshiwara",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "Lower Oshiwara,\tलोअर ओशिवरा",
+      "cleaned_kml_name": "Lower Oshiwara",
+      "coordinates": [
+        72.83173792136299,
+        19.1406199423947
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Andheri West",
+      "line_id": "2A",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "अंधेरी (पश्चिम), Andheri (West)",
+      "cleaned_kml_name": "Andheri West",
+      "coordinates": [
+        72.83144644948665,
+        19.12914078482039
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Maharashtranagar–Mandale",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "37\tMandale, मंडाले",
+      "cleaned_kml_name": "37 Mandale",
+      "coordinates": [
+        72.9384851904635,
+        19.04961564088568
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mankhurd",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "36\tमानखुर्द, Mankhurd",
+      "cleaned_kml_name": "36 Mankhurd",
+      "coordinates": [
+        72.93116908983954,
+        19.04917017701718
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Deonar",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "35\tDeonar, देवनार",
+      "cleaned_kml_name": "35 Deonar",
+      "coordinates": [
+        72.91745873172904,
+        19.04490287763844
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Chhatrapati Shivaji Maharaj Chowk (Chembur)",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "34\tShivaji Chowk (Chembur), शिवाजी चौक (चेंबूर)",
+      "cleaned_kml_name": "34 Shivaji Chowk Chembur",
+      "coordinates": [
+        72.907059105596,
+        19.04786033734596
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Deshbhakt N.G. Acharya Udyan–Diamond Garden",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "33\tDiamond Garden, डायमंड गार्डन",
+      "cleaned_kml_name": "33 Diamond Garden",
+      "coordinates": [
+        72.90186403105763,
+        19.05178126378758
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Chembur",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "operational",
+      "kml_name": "चेंबूर, Chembur",
+      "cleaned_kml_name": "Chembur",
+      "coordinates": [
+        72.89754881940486,
+        19.06121617462263
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Aarey JVLR",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Aarey JVLR, आरे जे.व्ही.एल.आर.",
+      "cleaned_kml_name": "Aarey JVLR",
+      "coordinates": [
+        72.88436375290992,
+        19.13110286483764
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "SEEPZ",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "SEEPZ, सीप्झ",
+      "cleaned_kml_name": "SEEPZ",
+      "coordinates": [
+        72.87353260558125,
+        19.12574907284021
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "MIDC–Andheri",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "MIDC - Andheri, एम.आय.डी.सी. - अंधेरी",
+      "cleaned_kml_name": "MIDC Andheri",
+      "coordinates": [
+        72.8738637112993,
+        19.11737065414776
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Marol Naka",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Marol Naka,\nमरोळ नाका",
+      "cleaned_kml_name": "Marol Naka",
+      "coordinates": [
+        72.87957203456432,
+        19.1080907971696
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "CSMIA–T2",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Chhatrapati Shivaji Maharaj International Airport - T2, छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळ - टी२",
+      "cleaned_kml_name": "Chhatrapati Shivaji Maharaj International Airport T2",
+      "coordinates": [
+        72.87446849008457,
+        19.10208794823952
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Sahar Road",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Sahar Road, सहार रोड",
+      "cleaned_kml_name": "Sahar Road",
+      "coordinates": [
+        72.8649307362534,
+        19.10215950650175
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "CSMIA–T1",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Chhatrapati Shivaji Maharaj International Airport - T1, छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळ - टी१",
+      "cleaned_kml_name": "Chhatrapati Shivaji Maharaj International Airport T1",
+      "coordinates": [
+        72.85362237599983,
+        19.09390353425054
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Santacruz",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "सांताक्रुझ, Santacruz",
+      "cleaned_kml_name": "Santacruz",
+      "coordinates": [
+        72.8470524398135,
+        19.07891449003876
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Bandra Colony",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Bandra Colony, वांद्रे वसाहत",
+      "cleaned_kml_name": "Bandra Colony",
+      "coordinates": [
+        72.84949424202658,
+        19.06997402333953
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "BKC",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Bandra Kurla Complex, वांद्रे कुर्ला संकुल",
+      "cleaned_kml_name": "Bandra Kurla Complex",
+      "coordinates": [
+        72.85493545074947,
+        19.0603703583177
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dharavi",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "धारावी, Dharavi",
+      "cleaned_kml_name": "Dharavi",
+      "coordinates": [
+        72.8500188387187,
+        19.04634474989951
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Shitladevi Mandir",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Shitaladevi Mandir, शितलादेवी मंदिर",
+      "cleaned_kml_name": "Shitaladevi Mandir",
+      "coordinates": [
+        72.84220642631966,
+        19.03831726088469
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dadar",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "दादर, Dadar",
+      "cleaned_kml_name": "Dadar",
+      "coordinates": [
+        72.83938122320669,
+        19.02368833141648
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Siddhivinayak",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "सिद्धिविनायक, Siddhivinayak",
+      "cleaned_kml_name": "Siddhivinayak",
+      "coordinates": [
+        72.8307464042342,
+        19.01586917800424
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Worli",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "वरळी, Worli",
+      "cleaned_kml_name": "Worli",
+      "coordinates": [
+        72.81946857556669,
+        19.00866955726723
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Acharya Atre Chowk",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Acharya Atre Chowk, आचार्य अत्रे चौक",
+      "cleaned_kml_name": "Acharya Atre Chowk",
+      "coordinates": [
+        72.81823147519542,
+        18.99709828810866
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Science Centre",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Science Centre, विज्ञान केंद्र",
+      "cleaned_kml_name": "Science Centre",
+      "coordinates": [
+        72.82179592034434,
+        18.99029482805959
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mahalaxmi",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "महालक्ष्मी, Mahalaxmi",
+      "cleaned_kml_name": "Mahalaxmi",
+      "coordinates": [
+        72.82537736615808,
+        18.97942005348355
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Jagannath Shankar Sheth",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Jagannath Shankar Sheth, जगन्नाथ शंकरशेठ",
+      "cleaned_kml_name": "Jagannath Shankar Sheth",
+      "coordinates": [
+        72.8214674147583,
+        18.97058195511306
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Grant Road",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "ग्रँट रोड, Grant Road",
+      "cleaned_kml_name": "Grant Road",
+      "coordinates": [
+        72.81806665550043,
+        18.96290158383562
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Girgaon",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "गिरगाव, Girgaon",
+      "cleaned_kml_name": "Girgaon",
+      "coordinates": [
+        72.82265586357158,
+        18.95190900177756
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kalbadevi",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "काळबादेवी, Kalbadevi",
+      "cleaned_kml_name": "Kalbadevi",
+      "coordinates": [
+        72.82701909714018,
+        18.94692519759497
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Chhatrapati Shivaji Maharaj Terminus",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Chhatrapati Shivaji Maharaj Terminus, छत्रपती शिवाजी महाराज टर्मिनस",
+      "cleaned_kml_name": "Chhatrapati Shivaji Maharaj Terminus",
+      "coordinates": [
+        72.83223914806152,
+        18.94064539042945
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Hutatma Chowk",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Hutatma Chowk, हुतात्मा चौक",
+      "cleaned_kml_name": "Hutatma Chowk",
+      "coordinates": [
+        72.8328493313257,
+        18.9345545941056
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Churchgate",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "चर्चगेट, Churchgate",
+      "cleaned_kml_name": "Churchgate",
+      "coordinates": [
+        72.82620886971327,
+        18.93058680594325
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Vidhan Bhavan",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Vidhan Bhavan, विधान भवन",
+      "cleaned_kml_name": "Vidhan Bhavan",
+      "coordinates": [
+        72.82572703217737,
+        18.92469932126777
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Cuffe Parade",
+      "line_id": "3",
+      "line_name": "Aqua Line",
+      "status": "operational",
+      "kml_name": "Cuffe Parade, कफ परेड",
+      "cleaned_kml_name": "Cuffe Parade",
+      "coordinates": [
+        72.8202671001224,
+        18.91291418265765
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Ovaripada",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Ovaripada, ओवरीपाडा",
+      "cleaned_kml_name": "Ovaripada",
+      "coordinates": [
+        72.86420884599791,
+        19.2433129863412
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Rashtriya Udyan",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Rashtriya Udyan, राष्ट्रीय उद्यान",
+      "cleaned_kml_name": "Rashtriya Udyan",
+      "coordinates": [
+        72.86324132985987,
+        19.23468430605362
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Devipada",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Devipada, देवीपाडा",
+      "cleaned_kml_name": "Devipada",
+      "coordinates": [
+        72.8642874834777,
+        19.224266460582
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Magathane",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Magathane, मागाठाणे",
+      "cleaned_kml_name": "Magathane",
+      "coordinates": [
+        72.86677826900261,
+        19.21716987227736
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Poisar",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Poisar, पोईसर",
+      "cleaned_kml_name": "Poisar",
+      "coordinates": [
+        72.8634325381118,
+        19.20387607093375
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Akurli",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Akurli, आकुर्ली",
+      "cleaned_kml_name": "Akurli",
+      "coordinates": [
+        72.86065737988358,
+        19.19822454871459
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kurar",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Kurar, कुरार",
+      "cleaned_kml_name": "Kurar",
+      "coordinates": [
+        72.85854577460405,
+        19.187143480149
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dindoshi",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "दिंडोशी, Dindoshi",
+      "cleaned_kml_name": "Dindoshi",
+      "coordinates": [
+        72.8583084215705,
+        19.17966110670971
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Aarey",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "आरे, Aarey",
+      "cleaned_kml_name": "Aarey",
+      "coordinates": [
+        72.85878815672585,
+        19.16925982103567
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Goregaon East",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "गोरेगाव (पूर्व), Goregaon(East)",
+      "cleaned_kml_name": "Goregaon East",
+      "coordinates": [
+        72.85659397280989,
+        19.15250506232931
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Jogeshwari East",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "जोगेश्वरी (पूर्व), Jogeshwari (East)",
+      "cleaned_kml_name": "Jogeshwari East",
+      "coordinates": [
+        72.85514588881632,
+        19.14280644208631
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mogra",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Mogra, मोगरा",
+      "cleaned_kml_name": "Mogra",
+      "coordinates": [
+        72.85540956357384,
+        19.12870790528584
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Gundavali",
+      "line_id": "7",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Gundavali, गुंदवली",
+      "cleaned_kml_name": "Gundavali",
+      "coordinates": [
+        72.85518238458401,
+        19.11483166204312
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dahisar East",
+      "line_id": "9",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "दहिसर (पूर्व), Dahisar (East)",
+      "cleaned_kml_name": "Dahisar East",
+      "coordinates": [
+        72.86697215540136,
+        19.25096576390909
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Pandurang Wadi",
+      "line_id": "9",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Pandurang Wadi, पांडुरंग वाडी",
+      "cleaned_kml_name": "Pandurang Wadi",
+      "coordinates": [
+        72.8725892945066,
+        19.2597987019458
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Miragaon",
+      "line_id": "9",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Miragaon, मिरागाव",
+      "cleaned_kml_name": "Miragaon",
+      "coordinates": [
+        72.88070121318611,
+        19.27102115816425
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kashigaon",
+      "line_id": "9",
+      "line_name": "Red Line",
+      "status": "operational",
+      "kml_name": "Kashigaon, काशिगाव",
+      "cleaned_kml_name": "Kashigaon",
+      "coordinates": [
+        72.88026560932819,
+        19.27772302062882
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "ESIC Nagar",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "ESIC Nagar, का.रा.वि.म. नगर",
+      "cleaned_kml_name": "ESIC Nagar",
+      "coordinates": [
+        72.83684751028873,
+        19.10709981847491
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Prem Nagar",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Prem Nagar, प्रेम नगर",
+      "cleaned_kml_name": "Prem Nagar",
+      "coordinates": [
+        72.83711887642328,
+        19.10934135204122
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Indira Nagar",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Khira Nagar, खिरा नगर",
+      "cleaned_kml_name": "Khira Nagar",
+      "coordinates": [
+        72.83795530740679,
+        19.08193059428232
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Nanavati Hospital",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Nanavati Hospital, नानावटी रुग्णालय",
+      "cleaned_kml_name": "Nanavati Hospital",
+      "coordinates": [
+        72.83964251242178,
+        19.09547515902744
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Khira Nagar",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Khira Nagar, खिरा नगर",
+      "cleaned_kml_name": "Khira Nagar",
+      "coordinates": [
+        72.83795530740679,
+        19.08193059428232
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Saraswat Nagar",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Saraswat Nagar, सारस्वत नगर",
+      "cleaned_kml_name": "Saraswat Nagar",
+      "coordinates": [
+        72.83758441767634,
+        19.07310457278214
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Bandra Metro",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Bandra Metro",
+      "cleaned_kml_name": "Bandra Metro",
+      "coordinates": [
+        72.83807219489596,
+        19.05331007437601
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Income Tax Office",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Income Tax Office",
+      "cleaned_kml_name": "Income Tax Office",
+      "coordinates": [
+        72.85306477620512,
+        19.05760836124713
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "ILFS",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "ILFS",
+      "cleaned_kml_name": "ILFS",
+      "coordinates": [
+        72.86322891848047,
+        19.06586311835968
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "MTNL Metro",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "MTNL Metro",
+      "cleaned_kml_name": "MTNL Metro",
+      "coordinates": [
+        72.8698784140361,
+        19.0699897603942
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "SG Barve Marg",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "SG Barve Marg",
+      "cleaned_kml_name": "SG Barve Marg",
+      "coordinates": [
+        72.88137578362517,
+        19.07366064133724
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kurla East",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "Kurla East",
+      "cleaned_kml_name": "Kurla East",
+      "coordinates": [
+        72.88674982725216,
+        19.0655249564488
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "EEH",
+      "line_id": "2B",
+      "line_name": "Yellow Line",
+      "status": "under_construction",
+      "kml_name": "EEH",
+      "cleaned_kml_name": "EEH",
+      "coordinates": [
+        72.88835080334974,
+        19.05555282704095
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Bhakti Park Metro",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Bhakti Park, भक्ती पार्क",
+      "cleaned_kml_name": "Bhakti Park",
+      "coordinates": [
+        72.87761445297818,
+        19.02902397969962
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Wadala TT",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Wadala Truck Terminal, वडाळा ट्रक टर्मिनल",
+      "cleaned_kml_name": "Wadala Truck Terminal",
+      "coordinates": [
+        72.88021844706071,
+        19.03800846786315
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Anik Nagar Bus Depot",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Anik Nagar Bus Depot, आणिक नगर बस आगार",
+      "cleaned_kml_name": "Anik Nagar Bus Depot",
+      "coordinates": [
+        72.87859054446277,
+        19.04618423629103
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Siddharth Colony",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Siddharth Colony, सिद्धार्थ कॉलनी",
+      "cleaned_kml_name": "Siddharth Colony",
+      "coordinates": [
+        72.8869899452078,
+        19.05616915793664
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Garodia Nagar",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Gopal Nagar, गोपाळ नगर",
+      "cleaned_kml_name": "Gopal Nagar",
+      "coordinates": [
+        73.06450285130839,
+        19.29454385680239
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Pant Nagar",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Pant Nagar, पंत नगर",
+      "cleaned_kml_name": "Pant Nagar",
+      "coordinates": [
+        72.90239653828819,
+        19.07264676887522
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Laxmi Nagar",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Shyam Nagar, श्याम नगर",
+      "cleaned_kml_name": "Shyam Nagar",
+      "coordinates": [
+        72.86177612882155,
+        19.13930501204223
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Shreyas Cinema",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Shreyas Cinema, श्रेयस सिनेमा",
+      "cleaned_kml_name": "Shreyas Cinema",
+      "coordinates": [
+        72.9166487553176,
+        19.09816172877733
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Godrej Company",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Godrej Company, गोदरेज कंपनी",
+      "cleaned_kml_name": "Godrej Company",
+      "coordinates": [
+        72.92085466054316,
+        19.10355027053591
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Vikhroli Metro",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "विक्रोळी, Vikhroli",
+      "cleaned_kml_name": "Vikhroli",
+      "coordinates": [
+        72.92451653570018,
+        19.10889183856102
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Surya Nagar",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Surya Nagar, सूर्य नगर",
+      "cleaned_kml_name": "Surya Nagar",
+      "coordinates": [
+        72.92618517519448,
+        19.1177402532532
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Gandhi Nagar",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Anand Nagar, आनंद नगर",
+      "cleaned_kml_name": "Anand Nagar",
+      "coordinates": [
+        72.86601014006138,
+        19.2572703069864
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Naval Housing",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Naval Housing, नौदल गृहनिर्माण",
+      "cleaned_kml_name": "Naval Housing",
+      "coordinates": [
+        72.92765854966395,
+        19.13275032958094
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Bhandup Mahapalika",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Bhandup Mahapalika, भांडुप महापालिका",
+      "cleaned_kml_name": "Bhandup Mahapalika",
+      "coordinates": [
+        72.93082420708474,
+        19.13878602638751
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Bhandup Metro",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Bandra Metro",
+      "cleaned_kml_name": "Bandra Metro",
+      "coordinates": [
+        72.83807219489596,
+        19.05331007437601
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Shangrila",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Shangrila, शांग्रीला",
+      "cleaned_kml_name": "Shangrila",
+      "coordinates": [
+        72.93760238047996,
+        19.15349924155596
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Sonapur",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "सोनापूर, Sonapur",
+      "cleaned_kml_name": "Sonapur",
+      "coordinates": [
+        72.9384304115873,
+        19.16617918187702
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mulund Fire Station",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Mulund Fire Station, मुलुंड अग्निशमन केंद्र",
+      "cleaned_kml_name": "Mulund Fire Station",
+      "coordinates": [
+        72.94248398155987,
+        19.17558277954505
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mulund Naka",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Mulund Naka, मुलुंड नाका",
+      "cleaned_kml_name": "Mulund Naka",
+      "coordinates": [
+        72.95086463482822,
+        19.1834707354214
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Thane Teen Haath Naka",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Teen Haath Naka (Thane), तीन हात नाका (ठाणे)",
+      "cleaned_kml_name": "Teen Haath Naka Thane",
+      "coordinates": [
+        72.96165426290756,
+        19.18712946282468
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "RTO Thane",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "RTO Thane, आरटीओ ठाणे",
+      "cleaned_kml_name": "RTO Thane",
+      "coordinates": [
+        72.96268005256331,
+        19.19332569748404
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mahapalika Marg",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Mahapalika Marg, महापालिका मार्ग",
+      "cleaned_kml_name": "Mahapalika Marg",
+      "coordinates": [
+        72.9648983685196,
+        19.2011033333615
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Cadbury Junction",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Cadbury Junction, कॅडबरी जंक्शन",
+      "cleaned_kml_name": "Cadbury Junction",
+      "coordinates": [
+        72.97023532375533,
+        19.2061845123663
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Majiwada",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "माजिवडा, Majiwada",
+      "cleaned_kml_name": "Majiwada",
+      "coordinates": [
+        72.97571820185888,
+        19.21150135567898
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kapurbawdi",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Kapurbawdi, कापूरबावडी",
+      "cleaned_kml_name": "Kapurbawdi",
+      "coordinates": [
+        72.97746251201916,
+        19.22425309110192
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Manpada",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "मानपाडा, Manpada",
+      "cleaned_kml_name": "Manpada",
+      "coordinates": [
+        72.97657746736199,
+        19.23134894899139
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Tikuji-Ni-Wadi",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Tikuji-ni-wadi, टिकूजी-नी-वाडी",
+      "cleaned_kml_name": "Tikuji ni wadi",
+      "coordinates": [
+        72.97559882738884,
+        19.23813103726435
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dongari Pada",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Dongripada, डोंगरीपाडा",
+      "cleaned_kml_name": "Dongripada",
+      "coordinates": [
+        72.97425923479562,
+        19.24901196366643
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Vijay Garden",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "Vijay Garden, विजय गार्डन",
+      "cleaned_kml_name": "Vijay Garden",
+      "coordinates": [
+        72.97004313696883,
+        19.25888054924925
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kasarvadavali",
+      "line_id": "4",
+      "line_name": "Green Line",
+      "status": "under_construction",
+      "kml_name": "कासारवडवली, Kasarvadavali",
+      "cleaned_kml_name": "Kasarvadavali",
+      "coordinates": [
+        72.96666388988234,
+        19.26752298344503
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kasarvadavali",
+      "line_id": "4A",
+      "line_name": "Green Line Extension",
+      "status": "under_construction",
+      "kml_name": "कासारवडवली, Kasarvadavali",
+      "cleaned_kml_name": "Kasarvadavali",
+      "coordinates": [
+        72.96666388988234,
+        19.26752298344503
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Gaimukh",
+      "line_id": "4A",
+      "line_name": "Green Line Extension",
+      "status": "under_construction",
+      "kml_name": "Gaimukh, गायमुख",
+      "cleaned_kml_name": "Gaimukh",
+      "coordinates": [
+        72.9475209319203,
+        19.28449521854706
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Balkum Naka",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Balkum Naka, बाळकुम नाका",
+      "cleaned_kml_name": "Balkum Naka",
+      "coordinates": [
+        72.98791493242292,
+        19.22056884792736
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kasheli",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Kasheli, कशेळी",
+      "cleaned_kml_name": "Kasheli",
+      "coordinates": [
+        73.01637545090779,
+        19.23981242722836
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kalher",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Kalher, काल्हेर",
+      "cleaned_kml_name": "Kalher",
+      "coordinates": [
+        73.02279613512636,
+        19.25400679129653
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Purna",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Purna, पूर्णा",
+      "cleaned_kml_name": "Purna",
+      "coordinates": [
+        73.02784560511391,
+        19.25975966744736
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Anjurphata",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Anjur Phata, अंजूर फाटा",
+      "cleaned_kml_name": "Anjur Phata",
+      "coordinates": [
+        73.04300117216435,
+        19.27459850795742
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dhamankar Naka",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Dhamankar Naka, धामणकर नाका",
+      "cleaned_kml_name": "Dhamankar Naka",
+      "coordinates": [
+        73.05241701066458,
+        19.2858411610298
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Bhiwandi",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "भिवंडी, Bhiwandi",
+      "cleaned_kml_name": "Bhiwandi",
+      "coordinates": [
+        73.05998755835084,
+        19.29336493090482
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Gopal Nagar",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Gopal Nagar, गोपाळ नगर",
+      "cleaned_kml_name": "Gopal Nagar",
+      "coordinates": [
+        73.06450285130839,
+        19.29454385680239
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Temghar",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Temghar, टेमघर",
+      "cleaned_kml_name": "Temghar",
+      "coordinates": [
+        73.07417285453853,
+        19.28166344587251
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Rajnoli",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Rajnouli Village, रांजणोली गाव",
+      "cleaned_kml_name": "Rajnouli Village",
+      "coordinates": [
+        73.08405620885796,
+        19.26861174541445
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Gove Gaon",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Govegaon MIDC, गोवेगाव एमआयडीसी",
+      "cleaned_kml_name": "Govegaon MIDC",
+      "coordinates": [
+        73.09013475359514,
+        19.26166859527566
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kon Gaon",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Kongaon, कोनगाव",
+      "cleaned_kml_name": "Kongaon",
+      "coordinates": [
+        73.10645008105604,
+        19.2480497843621
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Lal Chowki",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Sahajanand Chowk, सहजानंद चौक",
+      "cleaned_kml_name": "Sahajanand Chowk",
+      "coordinates": [
+        73.12839215070757,
+        19.24480506702529
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kalyan Station",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Kalyan Railway Station, कल्याण रेल्वे स्थानक",
+      "cleaned_kml_name": "Kalyan Railway Station",
+      "coordinates": [
+        73.12758609303592,
+        19.23883725129479
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kalyan APMC",
+      "line_id": "5",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Kalyan APMC, कल्याण एपीएमसी",
+      "cleaned_kml_name": "Kalyan APMC",
+      "coordinates": [
+        73.12234376068747,
+        19.23508866022033
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Swami Samarth Nagar",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Swami Samarth Nagar (Lokhandwala), स्वामी समर्थ नगर (लोखंडवाला)",
+      "cleaned_kml_name": "Swami Samarth Nagar Lokhandwala",
+      "coordinates": [
+        72.8271988215877,
+        19.14069046527636
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Adarsh Nagar",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Adarsh Nagar, आदर्श नगर",
+      "cleaned_kml_name": "Adarsh Nagar",
+      "coordinates": [
+        72.83374352409481,
+        19.14189141773432
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Jogeshwari West",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "जोगेश्वरी (पश्चिम), Jogeshwari (West)",
+      "cleaned_kml_name": "Jogeshwari West",
+      "coordinates": [
+        72.84135333048377,
+        19.14030189544254
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "JVLR",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "JVLR Junction, जेवीएलआर जंक्शन",
+      "cleaned_kml_name": "JVLR Junction",
+      "coordinates": [
+        72.8529685510287,
+        19.13991916457345
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Shyam Nagar",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Shyam Nagar, श्याम नगर",
+      "cleaned_kml_name": "Shyam Nagar",
+      "coordinates": [
+        72.86177612882155,
+        19.13930501204223
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Mahakali Caves",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Mahakali Caves, महाकाली लेणी",
+      "cleaned_kml_name": "Mahakali Caves",
+      "coordinates": [
+        72.87400136301126,
+        19.13560487320147
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "SEEPZ Village",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "SEEPZ Village, सीप्झ गाव",
+      "cleaned_kml_name": "SEEPZ Village",
+      "coordinates": [
+        72.88240991589801,
+        19.12947377259693
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Saki Vihar Road",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Saki Vihar Road, साकी विहार रोड",
+      "cleaned_kml_name": "Saki Vihar Road",
+      "coordinates": [
+        72.88979005832576,
+        19.12668549862065
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Rambaug",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Rambaug (Powai), रामबाग (पवई)",
+      "cleaned_kml_name": "Rambaug Powai",
+      "coordinates": [
+        72.89895452881984,
+        19.12186535562067
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Powai Lake",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Powai Lake, पवई तलाव",
+      "cleaned_kml_name": "Powai Lake",
+      "coordinates": [
+        72.90601765443597,
+        19.12011661025658
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "IIT, Powai",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "IIT Powai, आयआयटी पवई",
+      "cleaned_kml_name": "IIT Powai",
+      "coordinates": [
+        72.91377436792733,
+        19.12426122795075
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kanjur Marg West",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "कांजूरमार्ग (पश्चिम), Kanjurmarg (West)",
+      "cleaned_kml_name": "Kanjurmarg West",
+      "coordinates": [
+        72.9245210067276,
+        19.12555149043348
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Vikhroli (EEH)",
+      "line_id": "6",
+      "line_name": "Pink Line",
+      "status": "under_construction",
+      "kml_name": "Vikhroli EEH, विक्रोळी इइएच",
+      "cleaned_kml_name": "Vikhroli EEH",
+      "coordinates": [
+        72.93520464616564,
+        19.1248780113486
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Airport Colony",
+      "line_id": "7A",
+      "line_name": "Red Line Extension",
+      "status": "under_construction",
+      "kml_name": "Airport Colony, विमानतळ वसाहत",
+      "cleaned_kml_name": "Airport Colony",
+      "coordinates": [
+        72.85408039977223,
+        19.10588835945292
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "CSIA",
+      "line_id": "7A",
+      "line_name": "Red Line Extension",
+      "status": "under_construction",
+      "kml_name": "Chhatrapati Shivaji Maharaj International Airport - T2, छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळ - टी२",
+      "cleaned_kml_name": "Chhatrapati Shivaji Maharaj International Airport T2",
+      "coordinates": [
+        72.87446849008457,
+        19.10208794823952
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Sai Baba Nagar",
+      "line_id": "9",
+      "line_name": "Red Line Extension",
+      "status": "under_construction",
+      "kml_name": "Sai Baba Nagar, साई बाबा नगर",
+      "cleaned_kml_name": "Sai Baba Nagar",
+      "coordinates": [
+        72.87101662753071,
+        19.28447848971463
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Meditiya Nagar",
+      "line_id": "9",
+      "line_name": "Red Line Extension",
+      "status": "under_construction",
+      "kml_name": "Deepak Hospital (Medtiya Nagar), दीपक हॉस्पिटल (मेडतिया नगर)",
+      "cleaned_kml_name": "Deepak Hospital Medtiya Nagar",
+      "coordinates": [
+        72.86008687782892,
+        19.29395472365761
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Shahid Bhagat Singh Garden",
+      "line_id": "9",
+      "line_name": "Red Line Extension",
+      "status": "under_construction",
+      "kml_name": "Shahid Bhagat Singh Garden, शहीद भगतसिंग गार्डन",
+      "cleaned_kml_name": "Shahid Bhagat Singh Garden",
+      "coordinates": [
+        72.8494063174249,
+        19.29493042904111
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Subhash Chandra Bose Stadium",
+      "line_id": "9",
+      "line_name": "Red Line Extension",
+      "status": "under_construction",
+      "kml_name": "Subhash Chandra Bose Stadium, सुभाषचंद्र बोस स्टेडियम",
+      "cleaned_kml_name": "Subhash Chandra Bose Stadium",
+      "coordinates": [
+        72.84349424031727,
+        19.29433675869909
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kalyan",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Kalyan Railway Station, कल्याण रेल्वे स्थानक",
+      "cleaned_kml_name": "Kalyan Railway Station",
+      "coordinates": [
+        73.12758609303592,
+        19.23883725129479
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kalyan APMC",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Kalyan APMC, कल्याण एपीएमसी",
+      "cleaned_kml_name": "Kalyan APMC",
+      "coordinates": [
+        73.12234376068747,
+        19.23508866022033
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Ganesh Nagar",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Ganesh Nagar (Kalyan), गणेश नगर (कल्याण)",
+      "cleaned_kml_name": "Ganesh Nagar Kalyan",
+      "coordinates": [
+        73.12265191386014,
+        19.22886189948652
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Pisavali Gaon",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "पिसवली गाव, Pisavali Gaon",
+      "cleaned_kml_name": "Pisavali Gaon",
+      "coordinates": [
+        73.11905869525421,
+        19.21806884262222
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Golavali",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "गोळवली, Golavali",
+      "cleaned_kml_name": "Golavali",
+      "coordinates": [
+        73.11133193884831,
+        19.20932589116082
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Dombivli MIDC",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Dombivali MIDC, डोंबिवली एमआयडीसी",
+      "cleaned_kml_name": "Dombivali MIDC",
+      "coordinates": [
+        73.10368547324806,
+        19.20165383204235
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Sagaon",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "सागाव, Sagaon",
+      "cleaned_kml_name": "Sagaon",
+      "coordinates": [
+        73.09866166680868,
+        19.19613926303781
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Sonarpada",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "सोनारपाडा, Sonarpada",
+      "cleaned_kml_name": "Sonarpada",
+      "coordinates": [
+        73.09133240704642,
+        19.18602262420152
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Manpada",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "मानपाडा, Manpada",
+      "cleaned_kml_name": "Manpada",
+      "coordinates": [
+        72.97657746736199,
+        19.23134894899139
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Hedutane",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "हेदुटणे, Hedutane",
+      "cleaned_kml_name": "Hedutane",
+      "coordinates": [
+        73.0943323652682,
+        19.170598897856
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Kolegaon",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "कोळेगाव, Kolegaon",
+      "cleaned_kml_name": "Kolegaon",
+      "coordinates": [
+        73.0900790647102,
+        19.16282107455977
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Nilje Gaon",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "निळजे गाव, Nilaje Gaon",
+      "cleaned_kml_name": "Nilaje Gaon",
+      "coordinates": [
+        73.0814716932165,
+        19.15409329527039
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Vadavali",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "वडवली, Vadavali",
+      "cleaned_kml_name": "Vadavali",
+      "coordinates": [
+        73.09096658029536,
+        19.14378305887745
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Bale",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "बाळे, Bale",
+      "cleaned_kml_name": "Bale",
+      "coordinates": [
+        73.09412848496059,
+        19.13088491825262
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Waklan",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "वाकळण, Waklan",
+      "cleaned_kml_name": "Waklan",
+      "coordinates": [
+        73.09692441827876,
+        19.11941718671349
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Turbhe",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "तुर्भे, Turbhe",
+      "cleaned_kml_name": "Turbhe",
+      "coordinates": [
+        73.09650949132106,
+        19.10832652750937
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Pisave Depot",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Pisarve Depot, पिसार्वे आगार",
+      "cleaned_kml_name": "Pisarve Depot",
+      "coordinates": [
+        73.09139657656343,
+        19.09997192331655
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Pisave",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "पिसार्वे, Pisarve",
+      "cleaned_kml_name": "Pisarve",
+      "coordinates": [
+        73.08640797429933,
+        19.09226646043312
+      ],
+      "missing_from_kml": false
+    },
+    {
+      "official_name": "Amandoot / Taloja",
+      "line_id": "12",
+      "line_name": "Orange Line",
+      "status": "under_construction",
+      "kml_name": "Amandoot, अमनदूत",
+      "cleaned_kml_name": "Amandoot",
+      "coordinates": [
+        73.08181242240262,
+        19.07372655437538
+      ],
+      "missing_from_kml": false
+    }
+  ],
+  "unmatched_stations": []
+}

@@ -1,0 +1,7 @@
+route_id,agency_id,route_short_name,route_long_name,route_type
+ROUTE_THBR,CR_WR_SUB,Trans-Harbour Line,Thane - Vashi/Panvel Trans-Harbour Local,2
+ROUTE_URAN,CR_WR_SUB,Uran Line,Nerul/Belapur - Uran Local,2
+ROUTE_CR,CR_WR_SUB,Central Line,Mumbai CSMT - Kalyan/Kasara/Khopoli Main Local,2
+ROUTE_HBR,CR_WR_SUB,Harbour Line,Mumbai CSMT - Panvel/Goregaon Harbour Local,2
+ROUTE_SUB,CR_WR_SUB,Suburban Line,Mumbai Suburban Local Service,2
+ROUTE_WR,CR_WR_SUB,Western Line,Churchgate - Borivali/Virar/Dahanu Western Local,2

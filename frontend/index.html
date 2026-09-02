@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melbourne Transit Desert & Equity Platform | 3D Geospatial Explorer</title>
-  <meta name="description" content="Dynamic 3D Hexagonal Transit Desert and Equity Scoring Platform for Greater Melbourne using DuckDB, r5py, Uber H3, and MapLibre GL JS.">
+  <title>Multimodal Transit Desert & Equity Platform | Global 3D Geospatial Explorer</title>
+  <meta name="description" content="Dynamic 3D Hexagonal Transit Desert and Equity Scoring Platform for Greater Melbourne & Greater Mumbai using DuckDB, r5py, Uber H3, and MapLibre GL JS.">
 
   <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,11 +27,14 @@
     <header class="topbar glass-panel" id="topbar">
       <div class="brand-group">
         <div class="brand-icon">
-          <i data-lucide="layers"></i>
+          <i data-lucide="globe-2"></i>
         </div>
         <div class="brand-text">
-          <h1 class="brand-title">Transit Desert & Equity Platform</h1>
-          <span class="brand-subtitle">Greater Melbourne Multimodal Analysis (H3 Res-9 &times; r5py &times; DuckDB)</span>
+          <div class="brand-title-row">
+            <h1 class="brand-title">Transit Desert &amp; Equity Platform</h1>
+            <span class="city-pill-badge" id="activeCityBadge">Melbourne</span>
+          </div>
+          <span class="brand-subtitle" id="brandSubtitle">Multimodal Transit Equity &amp; Isochrone Engine (Uber H3 Res-9 &times; r5py &times; DuckDB)</span>
         </div>
       </div>
 
@@ -39,19 +42,19 @@
       <div class="header-stats" id="headerStats">
         <div class="stat-pill">
           <span class="stat-label">Analyzed Cells</span>
-          <span class="stat-val" id="statAnalyzedCells">121,802</span>
+          <span class="stat-val text-neon-cyan" id="statAnalyzedCells">--</span>
         </div>
         <div class="stat-pill highlight-pill">
-          <span class="stat-label">Priority Deserts</span>
-          <span class="stat-val text-neon-red" id="statDesertCells">12,959</span>
+          <span class="stat-label" id="statDesertLabel">Priority Deserts</span>
+          <span class="stat-val text-neon-red" id="statDesertCells">--</span>
         </div>
-        <div class="stat-pill">
-          <span class="stat-label">Impacted Population</span>
-          <span class="stat-val text-neon-cyan" id="statDesertPop">--</span>
+        <div class="stat-pill" id="pillSecondaryStat">
+          <span class="stat-label" id="statSecondaryLabel">Impacted Population</span>
+          <span class="stat-val text-neon-amber" id="statSecondaryVal">--</span>
         </div>
         <div class="system-status-badge">
           <span class="pulse-dot"></span>
-          <span>DuckDB Engine Active</span>
+          <span id="systemStatusText">DuckDB Engine Active</span>
         </div>
       </div>
     </header>
@@ -61,8 +64,65 @@
       <!-- 3D Map Container -->
       <div id="map" class="map-container"></div>
 
-      <!-- Left Floating Sidebar (Controls & Leaderboard) -->
+      <!-- Global Loading Progress Bar -->
+      <div class="global-loader-container" id="globalLoader">
+        <div class="loader-content">
+          <div class="spinner"></div>
+          <span id="loaderText">Loading Geospatial Analytics...</span>
+        </div>
+      </div>
+
+      <!-- Left Floating Sidebar (City Switcher, Controls & Leaderboard) -->
       <aside class="sidebar glass-panel" id="sidebar">
+        <!-- Control Group: City Switcher -->
+        <section class="control-card city-selector-card">
+          <div class="card-header-row">
+            <h2 class="card-title"><i data-lucide="navigation" class="icon-sm text-neon-cyan"></i> Active Metro Region</h2>
+            <span class="badge badge-accent">Multi-City</span>
+          </div>
+          <div class="city-switcher-grid" id="citySwitcher">
+            <button class="city-btn active" id="btnCityMelbourne" data-city="melbourne">
+              <span class="city-flag">&#x1F1E6;&#x1F1FA;</span>
+              <div class="city-info">
+                <span class="city-name">Greater Melbourne</span>
+                <span class="city-meta">121,802 Hexagons &bull; 45m Cutoff</span>
+              </div>
+            </button>
+            <button class="city-btn" id="btnCityMumbai" data-city="mumbai">
+              <span class="city-flag">&#x1F1EE;&#x1F1F3;</span>
+              <div class="city-info">
+                <span class="city-name">Greater Mumbai</span>
+                <span class="city-meta">10,891 Hexagons &bull; 90m Cutoff</span>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <!-- Control Group: 3-Stage Chronological Evaluation & Simulation (Mumbai) -->
+        <section class="control-card" id="mumbaiScenarioCard" style="display: none;">
+          <div class="card-header-row">
+            <h2 class="card-title"><i data-lucide="sparkles" class="icon-sm text-neon-amber"></i> Metro Network Evaluation</h2>
+            <span class="badge badge-accent">3-Stage</span>
+          </div>
+          <div class="segmented-control scenario-control" role="tablist">
+            <button class="seg-btn active" id="btnScenarioLegacy" data-scenario="legacy" role="tab" aria-selected="true">
+              <span class="dot dot-slate"></span> Legacy Network (Without Metro)
+            </button>
+            <button class="seg-btn" id="btnScenarioCurrent" data-scenario="current_metro" role="tab" aria-selected="false">
+              <span class="dot dot-blue"></span> Current Network (Active Metro)
+            </button>
+            <button class="seg-btn" id="btnScenarioFuture" data-scenario="future_2030" role="tab" aria-selected="false">
+              <span class="dot dot-cyan"></span> 2030 Network (Full Expansion)
+            </button>
+            <button class="seg-btn" id="btnScenarioDeltaActive" data-scenario="delta_active" role="tab" aria-selected="false">
+              <span class="dot dot-orange"></span> Impact of Active Metro
+            </button>
+            <button class="seg-btn" id="btnScenarioDeltaFuture" data-scenario="delta_future" role="tab" aria-selected="false">
+              <span class="dot dot-green"></span> Impact of Future Expansion
+            </button>
+          </div>
+        </section>
+
         <!-- Control Group: Metric Switcher -->
         <section class="control-card">
           <h2 class="card-title"><i data-lucide="sliders" class="icon-sm"></i> Visualization Metric</h2>
@@ -79,7 +139,7 @@
           </div>
         </section>
 
-        <!-- Control Group: 3D Height & Filters -->
+        <!-- Control Group: 3D Height & Spatial Filters -->
         <section class="control-card">
           <h2 class="card-title"><i data-lucide="box" class="icon-sm"></i> 3D Layer Adjustments</h2>
           
@@ -88,37 +148,72 @@
               <label for="sliderHeightScale">3D Height Extrusion</label>
               <span class="slider-val" id="valHeightScale">1.5&times;</span>
             </div>
-            <input type="range" id="sliderHeightScale" min="0.2" max="3.5" step="0.1" value="1.5" class="custom-slider">
+            <input type="range" id="sliderHeightScale" min="0.2" max="4.0" step="0.1" value="1.5" class="custom-slider">
           </div>
 
           <div class="slider-group">
             <div class="slider-header">
               <label for="sliderMinTDI">Min TDI Cutoff Filter</label>
-              <span class="slider-val" id="valMinTDI">0.34</span>
+              <span class="slider-val" id="valMinTDI">0.00</span>
             </div>
-            <input type="range" id="sliderMinTDI" min="0.0" max="0.75" step="0.02" value="0.34" class="custom-slider">
+            <input type="range" id="sliderMinTDI" min="0.0" max="0.80" step="0.02" value="0.00" class="custom-slider">
           </div>
 
-          <div class="filter-row">
-            <div class="select-wrapper">
-              <label for="selectSuburbFilter" class="sr-only">Filter Suburb</label>
-              <select id="selectSuburbFilter" class="custom-select">
-                <option value="">All Greater Melbourne Suburbs</option>
-              </select>
+          <!-- City Specific Dynamic Filters -->
+          <div id="citySpecificControls">
+            <!-- Melbourne Suburb Filter Dropdown -->
+            <div id="melbFilterContainer" class="filter-row">
+              <div class="select-wrapper">
+                <label for="selectSuburbFilter" class="sr-only">Filter Suburb</label>
+                <select id="selectSuburbFilter" class="custom-select">
+                  <option value="">All Greater Melbourne Suburbs</option>
+                </select>
+              </div>
             </div>
-            <button id="btnResetView" class="icon-btn" title="Reset Camera View">
-              <i data-lucide="rotate-ccw"></i>
+
+            <!-- Mumbai Thematic Layer Toggles -->
+            <div id="mumbaiTogglesContainer" class="layer-toggles-group" style="display: none;">
+              <span class="toggle-group-label">Transit & Spatial Overlays</span>
+              <div class="toggle-pill-row">
+                <button class="toggle-pill active" id="toggleMetroLines" data-layer="metro_lines">
+                  <span class="pill-dot dot-cyan"></span> 2030 Metro
+                </button>
+                <button class="toggle-pill active" id="toggleSuburbanRail" data-layer="suburban_rail">
+                  <span class="pill-dot dot-slate"></span> Suburban Rail
+                </button>
+                <button class="toggle-pill active" id="toggleMetroStations" data-layer="metro_stations">
+                  <span class="pill-dot dot-blue"></span> Metro Stations
+                </button>
+                <button class="toggle-pill active" id="toggleSlums" data-layer="slums">
+                  <span class="pill-dot dot-orange"></span> Informal Slums
+                </button>
+                <button class="toggle-pill active" id="toggleWards" data-layer="wards">
+                  <span class="pill-dot dot-cyan"></span> BMC Wards
+                </button>
+                <button class="toggle-pill" id="toggleOnlySlumHex" data-filter="only_slums">
+                  <span class="pill-dot dot-red"></span> Only Slums
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-footer-row">
+            <button id="btnResetView" class="btn-action-sm">
+              <i data-lucide="rotate-ccw" class="icon-sm"></i> Reset Camera View
             </button>
           </div>
         </section>
 
-        <!-- Suburb Leaderboard -->
+        <!-- Suburb / Desert Leaderboard -->
         <section class="control-card leaderboard-card">
           <div class="card-header-row">
-            <h2 class="card-title"><i data-lucide="trophy" class="icon-sm text-neon-red"></i> Worst Transit Deserts</h2>
-            <span class="badge badge-subtle">Top 10 Suburbs</span>
+            <h2 class="card-title" id="leaderboardTitle">
+              <i data-lucide="trophy" class="icon-sm text-neon-red"></i> 
+              <span id="leaderboardHeaderLabel">Worst Transit Deserts</span>
+            </h2>
+            <span class="badge badge-subtle" id="leaderboardBadge">Top Ranking</span>
           </div>
-          <p class="card-desc">Click any suburb to fly the 3D camera to its high-disadvantage corridor:</p>
+          <p class="card-desc" id="leaderboardDesc">Click any corridor to fly the 3D camera directly to its high-disadvantage hexagon:</p>
 
           <div class="leaderboard-list" id="leaderboardList">
             <div class="loading-state">
@@ -139,7 +234,7 @@
         <div class="inspector-body" id="inspectorBody">
           <div class="empty-inspector">
             <i data-lucide="mouse-pointer-click" class="icon-lg text-muted"></i>
-            <p>Hover or click on any 3D hexagon to inspect its demographic need and transit travel times.</p>
+            <p>Hover or click on any 3D hexagon to inspect its multimodal accessibility and transit travel times.</p>
           </div>
         </div>
       </aside>
@@ -158,7 +253,7 @@
         </div>
       </div>
 
-      <!-- Map Viewport Overlay Controls (Pitch / Rotation / Reset) -->
+      <!-- Map Viewport Overlay Controls (Pitch / Zoom) -->
       <div class="map-camera-controls glass-panel">
         <button id="btnPitchToggle" class="cam-btn" title="Toggle 2D / 3D Pitch View">
           <i data-lucide="compass"></i>

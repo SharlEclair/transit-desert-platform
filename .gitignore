@@ -1,3 +1,7 @@
+# ==============================================================================
+# Git Ignore Configuration - Multimodal Transit Desert & Equity Platform
+# ==============================================================================
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -10,18 +14,40 @@ venv/
 ENV/
 env/
 
-# Data Directories & Heavy Artifacts (Do NOT commit raw or processed datasets)
+# Environment Variables & Secrets
+.env
+*.env
+!.env.example
+
+# Heavy Spatial Datasets, Spreadsheets & Database Binaries
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+data/processed/*.db*
+data/processed/*.osm.pbf
+data/processed/*.zip
+data/processed/*.pbf
+data/processed/*.mapdb*
+data/mumbai/raw/*.zip
+data/mumbai/raw/*.kml
+data/mumbai/raw/*.osm.pbf
+data/mumbai/processed/*.db*
+data/mumbai/processed/*.osm.pbf
+data/mumbai/processed/*.zip
+data/mumbai/processed/*.pbf
+data/mumbai/processed/*.mapdb*
 data/temp/
+
 *.osm.pbf
 *.pbf
-*.zip
-*.mapdb*
 *.db
 *.db.wal
+*.mapdb*
+*.dat
+*.gpkg
+*.xlsx
+*.xls
+*.zip
+*.tar.gz
 
 # Distribution / Packaging
 build/
@@ -47,15 +73,9 @@ htmlcov/
 *.log
 hs_err_pid*.log
 
-# Editor & AI IDE Configurations
-.agents/
-.gemini/
+# Editor & OS Configurations
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
-
-# Operating System Files
 .DS_Store
 Thumbs.db
 desktop.ini

@@ -1,216 +1,197 @@
-<div align="center">
+# Mumbai 2030: Multimodal Transit Equity & 3-Stage Metro Evaluation Platform
 
-# 🚆 Melbourne Multimodal Transit Desert & Equity Platform
-### *Unmasking the "Transport Illusion" with Dynamic Multimodal Isochrones, DuckDB, `r5py`, and Uber H3*
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![DuckDB](https://img.shields.io/badge/DuckDB-1.1+-FFF000.svg?logo=duckdb&logoColor=black)](https://duckdb.org)
+[![Uber H3](https://img.shields.io/badge/Uber%20H3-Res--9-000000.svg?logo=uber&logoColor=white)](https://h3geo.org)
+[![r5py](https://img.shields.io/badge/Conveyal%20R5-r5py%20FastRaptor-FF6F00.svg)](https://r5py.readthedocs.io)
+[![MapLibre GL JS](https://img.shields.io/badge/MapLibre%20GL%20JS-3D%20WebGL-396B9E.svg?logo=maplibre&logoColor=white)](https://maplibre.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![DuckDB](https://img.shields.io/badge/DuckDB-Spatial_1.5+-FFF000?style=flat&logo=duckdb&logoColor=black)](https://duckdb.org)
-[![r5py](https://img.shields.io/badge/r5py-Conveyal_R5-orange?style=flat)](https://r5py.readthedocs.io)
-[![Uber H3](https://img.shields.io/badge/Uber_H3-Res--9_Hexagons-black?style=flat)](https://h3geo.org)
-[![MapLibre GL JS](https://img.shields.io/badge/MapLibre_GL-3D_Extrusion-blue?style=flat&logo=maplibre&logoColor=white)](https://maplibre.org)
-[![Python 3.12](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org)
+An enterprise spatial data science and multimodal transit simulation engine that evaluates spatial equity, transit desert severity, and transit expansion impact across **Greater Mumbai** (and benchmarked against **Greater Melbourne**).
 
-</div>
-
----
-
-## 📌 Executive Summary & The "Transport Illusion"
-
-Traditional urban transit equity audits suffer from the **"Transport Illusion"**: assuming that living within a 500-meter circular buffer of a bus or tram stop guarantees true public transit access. In reality, static buffers ignore:
-1. **Timetable Headways & Service Frequencies:** A bus that runs once every 90 minutes is practically inaccessible during commute hours.
-2. **Transfer Penalties & Topology:** Geographic proximity means little if crossing suburban railway lines or waterways requires multi-leg detours.
-3. **Multimodal Scheduling Synchrony:** Walking speed, platform dwell times, and connection risk govern actual reachability.
-
-This platform replaces naive spatial buffers with **dynamic multimodal travel-time isochrones** computed using Conveyal's `r5py` routing engine (OpenStreetMap street network + 8 unified GTFS transit feeds for Victoria). By overlaying these reachability matrices onto **121,802 Uber H3 Resolution-9 hexagons** and merging with **ABS 2021 Census & SEIFA Socio-Economic Disadvantage data** via DuckDB spatial joins, this project isolates real-world **Transit Deserts** across Greater Melbourne.
+The platform quantifies how historical suburban rail dominance created chronic spatial transit deserts—particularly for low-income and informal slum settlements—and simulates the equity relief delivered by the **MMRDA 2030 Master Metro Expansion (14 corridors, 177 stations)**.
 
 ---
 
-## 🏛 System Architecture
+## 🌟 Key Architecture & Capabilities
 
 ```mermaid
-graph TD
-    subgraph "Data Layer"
-        A1["ABS Census 2021 SA1 and SEIFA IRSD"] -->|"Spatial Ingestion - EPSG 4326"| D[("DuckDB Database")]
-        A2["OpenStreetMap Victoria PBF"] -->|"Topological Road Graph"| R5["r5py Conveyal R5 Engine"]
-        A3["8 Flat GTFS Transit Feeds"] -->|"Sanitized Schedule Bridging"| R5
-        A4["Uber H3 Res-9 Grid - 121802 Hexagons"] -->|"Centroid Points"| D
-    end
-
-    subgraph "Analytical Core"
-        R5 -->|"Batched Matrix Computations"| TM["melb_travel_matrix - 2598 Pairs"]
-        TM --> D
-        D -->|"Native ST_Intersects Spatial Join"| EQ["Materialized melb_equity_scores"]
-        EQ -->|"P80 Cutoff Filtering"| VD["SQL View - v_transit_deserts"]
-    end
-
-    subgraph "API and Visualization"
-        D -->|"Read-Only In-Process Analytics"| API["FastAPI Backend"]
-        API -->|"GeoJSON 3D Hexagons and REST API"| UI["MapLibre GL JS 3D Client"]
-        UI -->|"Interactive Controls"| UX["Metric Switcher - 3D Extrusion - Inspector"]
-    end
+flowchart TD
+    A[OpenStreetMap Extract .osm.pbf] --> D[Conveyal R5 Routing Engine]
+    B1[Suburban Rail GTFS] --> D
+    B2[BEST Bus GTFS] --> D
+    B3[Synthesized Metro GTFS 35 km/h] --> D
+    
+    C[Uber H3 Resolution-9 Grid Centroids 10,891 cells] --> D
+    
+    D -->|Multimodal FastRaptor 90-min Peak Routing| E[(DuckDB Spatial Database)]
+    
+    F[Demographic Need & Slum Polygons WGS84] --> E
+    
+    E -->|Linear Decay + Vulnerability Scoring| G[3-Stage Transit Desert Index TDI]
+    G --> H[FastAPI High-Concurrency Backend]
+    H --> I[MapLibre GL JS 3D WebGL Dashboard]
 ```
+
+- **DuckDB Native Spatial Engine:** High-speed analytical joins and spatial intersection operations between H3 hexagons, demographic census polygons, and multimodal travel matrices with zero Postgres/PostGIS overhead.
+- **Conveyal R5 FastRaptor Routing:** Java 21-backed multi-modal transit graph routing (Suburban Rail + BEST Buses + Metro Network + Walk transfers) computing travel times across **10,891 H3 Resolution-9 origins** to strategic mega-hubs under strict morning peak constraints.
+- **Standardized Uber H3 Hexagonal Grid:** Eliminates boundary distortion and Modifiable Areal Unit Problem (MAUP) using uniform Resolution-9 hexagons (~100m diameter).
+- **Informal Settlement & Slum Vulnerability Index:** Weights spatial accessibility against structural vulnerability ($V_i$), identifying informal settlement corridors requiring urgent transit equity interventions.
+- **3D WebGL Glassmorphism Explorer:** Responsive MapLibre GL JS interface featuring dynamic 3D hexagonal extrusion layers (`fill-extrusion`), halo station markers, and interactive scenario transitions.
 
 ---
 
-## 📐 Mathematical Formulation
+## 🔬 3-Stage Chronological Evaluation Methodology
 
-### 1. Multimodal Accessibility Score ($A_i \in [0.0, 1.0]$)
-For each H3 hexagon $i$, accessibility is computed using linear decay against a peak 45-minute commute cutoff across strategic employment, healthcare, and education destinations (Royal Melbourne Hospital, Monash University Clayton, Chadstone Shopping Centre):
+The platform models the urban transit evolution of Mumbai across three distinct operational milestones:
 
-$$A_i = \frac{1}{N_{\text{poi}}} \sum_{p \in \text{POIs}} \max\left(0.0, 1.0 - \frac{T_{i, p}^{\text{p50}}}{45.0}\right)$$
+1. **Stage 1: Legacy Network (Without Metro)**
+   - *Baseline Transport:* Suburban Railway (Western, Central, Harbour Lines) + BEST Bus network.
+   - *Result:* Extreme longitudinal connectivity along rail corridors, but severe lateral east-west transit deserts.
+2. **Stage 2: Current Network (Active Metro — 79 Stations)**
+   - *Active Feeds:* Line 1 (Blue), Line 2A (Yellow), Line 2B Phase 1 (Mandale–Chembur), Line 3 (Aqua — Cuffe Parade to Aarey), Line 7 (Red), and Line 9 Phase 1 (Dahisar East–Kashigaon).
+   - *Impact:* Substantial relief to the Western Express Highway and Andheri–Ghatkopar corridors.
+3. **Stage 3: 2030 Full Expansion (177 Stations across 14 Lines)**
+   - *Full Network:* Complete buildout of Lines 1 through 12 including Line 4 (Green), Line 5 (Orange), Line 6 (Pink), Line 7A, Line 9 Phase 2, and Line 12.
+   - *Impact:* Eliminates transit deserts across Eastern suburbs, Thane, Kalyan, and Navi Mumbai corridors.
 
-where $T_{i, p}^{\text{p50}}$ is the median transit travel time in minutes from origin $i$ to destination $p$.
-
-### 2. Demographic Need / Vulnerability Score ($V_i \in [0.0, 1.0]$)
-Combines normalized socio-economic disadvantage (ABS SEIFA Index of Relative Socio-economic Disadvantage, which incorporates low household income, zero vehicle ownership, and unemployment) with log-normalized population density:
-
-$$\text{Disadvantage}_i = \frac{1192.0 - S_i}{1192.0 - 266.0}$$
-
-$$\text{Density}_i = \min\left(1.0, \frac{\ln(1 + D_i)}{\ln(1 + 35000)}\right)$$
-
-$$V_i = 0.60 \times \text{Disadvantage}_i + 0.40 \times \text{Density}_i$$
-
-where $S_i$ is the ABS SEIFA IRSD score and $D_i$ is the population density ($\text{people}/\text{km}^2$).
-
-### 3. Transit Desert Index ($\text{TDI}_i \in [0.0, 1.0]$)
-A high Transit Desert Index identifies populated communities with high socio-economic vulnerability coupled with near-zero multimodal transit accessibility:
+### Transit Desert Index (TDI) & Equity Relief Metric ($\Delta\text{TDI}$)
 
 $$\text{TDI}_i = V_i \times (1.0 - A_i)$$
 
----
+Where:
+- $V_i \in [0.0, 1.0]$: Demographic Vulnerability Score (1.0 for informal slum clusters, 0.2 for standard urban fabric).
+- $A_i \in [0.0, 1.0]$: Composite Linear Decay Accessibility to destination mega-hubs within a 90-minute commute cutoff:
 
-## 🛠 Tech Stack
+$$A_i = \frac{1}{K} \sum_{k=1}^K \max\left(0, 1.0 - \frac{T_{i,k}}{T_{\text{max}}}\right)$$
 
-| Layer | Technology | Purpose |
-| :--- | :--- | :--- |
-| **Spatial Database** | **DuckDB (Spatial Extension)** | Columnar OLAP engine executing native R-Tree `ST_Intersects` centroid joins on 121,802 hexagons in $<1.5$ seconds. |
-| **Routing Engine** | **`r5py` (Conveyal R5)** | Java-backed multimodal transit graph compiler combining OSM walking networks with GTFS timetables. |
-| **Discrete Spatial Index** | **Uber H3 (Resolution 9)** | Equal-area hexagonal tessellation (~0.1 $\text{km}^2$ per cell) eliminating geographic boundary distortion. |
-| **Backend Framework** | **FastAPI + Pydantic** | Asynchronous Python REST API serving GeoJSON features, analytics, and summary statistics. |
-| **3D Visualization** | **MapLibre GL JS** | Hardware-accelerated WebGL client with dynamic 3D `fill-extrusion` hexagonal columns and custom color ramps. |
+$$\Delta\text{TDI}_{\text{Total}} = \text{TDI}_{\text{Legacy}} - \text{TDI}_{2030}$$
+
+A positive $\Delta\text{TDI}$ quantifies exact spatial disadvantage reduction delivered by transit infrastructure expansion.
 
 ---
 
-## 🚀 Key Engineering Highlights
+## 📊 Citywide Simulation Results (Mumbai)
 
-### 1. Robust Memory-Managed Origin Batching
-- Evaluating 121,802 origins against the entire Victoria multimodal transit network causes severe Java heap exhaustion if computed in a single call.
-- The pipeline batches origins into **20,000-cell chunks**, forcing explicit garbage collection cycles (`gc.collect()`), JVM pool thread safety (`-Djava.util.concurrent.ForkJoinPool.common.parallelism=1`), and automatic cleanup of temporary `.mapdb` swap files.
-
-### 2. GTFS Sanitization & Timetable Bridging
-- Raw Victoria GTFS archives contain empty optional tables (`transfers.txt`, `pathways.txt`) with zero data rows that crash R5's parser.
-- Preprocessing scripts automatically validate, sanitize, and repackage feeds into root-level archives, synthesizing `calendar.txt` bridge schedules when feeds rely strictly on `calendar_dates.txt`.
-
-### 3. Native Spatial Joins (Avoiding Boundary Distortion)
-- Rather than using H3 polygon polyfilling (which distorts census demographic statistics at precinct edges), exact H3 cell centroids are computed in WGS84 (`EPSG:4326`) and joined via DuckDB's native R-Tree operator (`ST_Intersects`).
-
-### 4. Interactive 3D Web Application
-- **Dynamic 3D Hexagon Extrusion:** Visualizes all 12,959 priority transit desert cells as 3D pillars whose heights and continuous colors update in real time based on user-selected metrics ($TDI$, $V_i$, or $A_i$).
-- **Priority Suburbs Leaderboard:** Features one-click camera fly-to animations with smooth pitch and bearing adjustments.
-- **Hexagon Inspector:** Deep-dive modal revealing exact SA1 code, SEIFA decile, density, and travel time breakdown to major hubs.
+| Evaluation Stage | Active Stations | Mean Accessibility ($A_i$) | Mean TDI | Slum Cluster TDI | Cells Benefiting |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Stage 1: Legacy (No Metro)** | 0 | **0.2005** | **0.1745** | **0.5522** | Baseline |
+| **Stage 2: Active Metro** | 79 | **0.2014** | **0.1743** | **0.5500** | **1,221 cells (11.2%)** |
+| **Stage 3: 2030 Full Network** | 177 | **0.2022** | **0.1741** | **0.5493** | **2,204 cells (20.2%)** |
 
 ---
 
-## 📦 Setup & Installation Guide
+## 🗄️ Data Sources & Attribution
+
+- **OpenStreetMap:** Road and pedestrian walking networks via Geofabrik / Overpass API.
+- **Mumbai Suburban Rail & BEST Bus GTFS:** Official schedule archives standardized to GTFS format.
+- **Mumbai Metro Network (KML & Station Geometries):**
+  > *Base KML for the Mumbai Metro network was sourced from a Reddit thread by ThatAditya06 (https://www.reddit.com/r/transit/comments/1spulom/complete_mumbai_metro_mmr_network_mapped_in/). The dataset was subsequently modified, rigorously updated, and algorithmically mapped for this project, adding missing under-construction stations, resolving Phase 1/Phase 2 operational statuses, and fixing physical alignments.*
+- **Demographic & Slum Boundaries:** Open City Mumbai ward census metrics and verified slum polygon datasets.
+- **Greater Melbourne Demographics:** Australian Bureau of Statistics (ABS) 2021 Census SA1 boundaries and SEIFA Index of Relative Socio-economic Disadvantage (IRSD).
+
+---
+
+## 🚀 Installation & Setup
 
 ### Prerequisites
-- **Python:** Version 3.10, 3.11, or 3.12
-- **Java Runtime:** **OpenJDK 21+ (64-bit)** (Required for `r5py` / Conveyal R5 JVM bindings)
-- **RAM:** 16GB+ recommended for building the Victoria-wide multimodal transit network graph.
+- **Python 3.10+ (64-bit)**
+- **OpenJDK 21+ (64-bit)** *(Required for `r5py` / Conveyal R5 JVM FastRaptor routing)*
+- **RAM:** 16GB+ recommended for multimodal graph compilation
 
 ### 1. Clone & Set Up Environment
+
 ```bash
 git clone https://github.com/SharlEclair/transit-desert-platform.git
 cd transit-desert-platform
 
 # Create virtual environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .\.venv\Scripts\activate
+
+# Activate virtual environment
+# On Windows (PowerShell):
+.\.venv\Scripts\Activate.ps1
+# On Linux/macOS:
+source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Configure Java 21 Home
-Ensure `JAVA_HOME` points to your 64-bit JDK 21 installation:
+### 2. Configure Environment Variables
+
+Copy the example configuration file:
 ```bash
-# Windows PowerShell example:
-$env:JAVA_HOME = "C:\Users\YourUser\.jdk\jdk-21.0.6+7"
+cp .env.example .env
 ```
 
-### 3. Data Directory Structure
-Place raw input datasets in `data/raw/`:
+Edit `.env` to supply your credentials:
+```ini
+# CartoDB / Map Provider Configuration
+CARTO_API_KEY=your_carto_api_key_here
+```
+
+### 3. Execute Pipeline Stages
+
+Run the data preparation, GTFS synthesis, matrix routing, and DuckDB view materialization:
+
+```bash
+# Step A: Synthesize standard GTFS feeds (35 km/h commercial speed)
+python src/mumbai/synthesize_future_gtfs.py
+
+# Step B: Generate standardized spatial GeoJSON layers
+python src/mumbai/build_final_geojsons.py
+
+# Step C: Compute Multimodal Travel Matrices via R5 (Active Metro + 2030 Network)
+python src/mumbai/compute_travel_matrix.py --scenario current_metro
+python src/mumbai/compute_travel_matrix.py --scenario 2030
+
+# Step D: Materialize 3-Stage Equity Views in DuckDB
+python src/mumbai/materialize_2030_equity.py
+```
+
+### 4. Run the Web Application
+
+Launch the FastAPI backend server:
+
+```bash
+python -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+Open your browser at **`http://127.0.0.1:8000/`** to interact with the 3D Geospatial Explorer.
+
+---
+
+## 📁 Repository Structure
+
 ```text
-data/
-├── raw/
-│   ├── osm/
-│   │   └── victoria-latest.osm.pbf                   # Geofabrik Victoria OSM extract
-│   ├── gtfs/
-│   │   └── gtfs.zip                                  # PTV Victoria GTFS master archive
-│   ├── SA1_2021_AUST_SHP_GDA2020/
-│   │   └── SA1_2021_AUST_GDA2020.shp                 # ABS SA1 Boundaries Shapefile
-│   └── Statistical Area Level 1, Indexes, SEIFA 2021.xlsx  # ABS SEIFA 2021 Excel
-└── processed/
-    └── transit_equity.db                             # Generated DuckDB Database
+transit-desert-platform/
+├── .env.example                     # Environment template
+├── .gitignore                       # Git exclusion rules for secrets & heavy binaries
+├── LICENSE                          # MIT License
+├── README.md                        # Project documentation
+├── requirements.txt                 # Python dependencies
+├── data/
+│   ├── raw/                         # Raw OSM, GTFS, census, and KML data
+│   └── processed/                   # DuckDB database, GTFS archives, GeoJSON layers
+├── frontend/
+│   ├── index.html                   # 3D Dashboard client interface
+│   ├── styles.css                   # Glassmorphism aesthetic theme & HUD components
+│   └── app.js                       # MapLibre GL JS engine & state orchestrator
+└── src/
+    ├── api/
+    │   ├── main.py                  # FastAPI server & Melbourne endpoints
+    │   └── mumbai_router.py         # 3-Stage Mumbai simulation & transit endpoints
+    └── mumbai/
+        ├── build_final_geojsons.py  # Spatial GeoJSON extractor
+        ├── compute_travel_matrix.py # R5 FastRaptor travel time computer
+        ├── finalize_kml_mapping.py  # KML v3 station entity resolution
+        ├── materialize_2030_equity.py # DuckDB 3-stage equity materializer
+        └── synthesize_future_gtfs.py # Bi-directional GTFS synthesizer
 ```
 
 ---
 
-## ⚡ Execution Pipeline
+## 📜 License
 
-Execute the end-to-end data engineering and scoring pipeline in sequence:
-
-```bash
-# 1. Initialize DuckDB schema
-python src/init_db.py
-
-# 2. Ingest ABS Census SA1 and SEIFA Demographics (Transformed to EPSG:4326)
-python src/ingest_demographics.py
-
-# 3. Generate 121,802 H3 Resolution-9 Hexagons over Greater Melbourne
-python src/generate_h3_grid.py
-
-# 4. Preprocess and unpack PTV GTFS sub-feeds
-python src/preprocess_gtfs.py
-
-# 5. Compute Multimodal Travel Matrix using r5py (Batching 121,802 origins)
-python src/compute_travel_matrix.py
-
-# 6. Perform Spatial Joins & Materialize melb_equity_scores and v_transit_deserts
-python src/compute_equity_scores.py
-```
-
----
-
-## 🌐 Launching the 3D Web Application
-
-Start the FastAPI server:
-```bash
-python -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000
-```
-Open **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)** in your browser to explore the interactive 3D platform.
-
----
-
-## 📊 Analytical Findings: Melbourne's Top Transit Deserts
-
-Aggregation of the top 20th percentile ($TDI \ge 0.3447$) reveals severe public transit deficits in Melbourne's outer northern, western, and south-eastern corridors:
-
-| Rank | Suburb / Precinct | Desert Hexes | Resident Population | SEIFA Decile | Avg Access ($A_i$) | Avg Vulnerability ($V_i$) | Avg TDI |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **#1** | **Dandenong - South** | 16 | 8,486 | 1.2 | `0.000` | `0.576` | **0.576** |
-| **#2** | **Meadow Heights** | 38 | 20,278 | 1.1 | `0.000` | `0.557` | **0.557** |
-| **#3** | **St Albans - North** | 53 | 25,091 | 1.1 | `0.003` | `0.547` | **0.545** |
-| **#4** | **Kings Park (Vic.)** | 37 | 16,004 | 1.1 | `0.000` | `0.542` | **0.542** |
-| **#5** | **Laverton** | 105 | 27,444 | 2.5 | `0.000` | `0.541` | **0.541** |
-| **#6** | **Doveton** | 35 | 19,124 | 1.1 | `0.000` | `0.537` | **0.537** |
-| **#7** | **Noble Park - West** | 40 | 23,550 | 1.3 | `0.009` | `0.538` | **0.534** |
-| **#8** | **Roxburgh Park - North** | 28 | 13,494 | 1.4 | `0.000` | `0.534` | **0.534** |
-| **#9** | **Broadmeadows** | 64 | 31,171 | 1.1 | `0.000` | `0.528` | **0.528** |
-| **#10** | **St Albans - South** | 51 | 29,735 | 1.3 | `0.009` | `0.532` | **0.528** |
-
----
-
-## 📄 License & Attribution
-- Data sources: Australian Bureau of Statistics (ABS Census 2021, SEIFA 2021), Public Transport Victoria (PTV GTFS), OpenStreetMap contributors.
-- Licensed under the **MIT License**.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.

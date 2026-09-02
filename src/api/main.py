@@ -18,15 +18,33 @@ from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field
 import duckdb
 import h3
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    if os.path.exists(".env"):
+        with open(".env", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    k, v = k.strip(), v.strip().strip("'\"")
+                    if k not in os.environ:
+                        os.environ[k] = v
+
+from src.api.mumbai_router import router as mumbai_router
 
 DB_PATH = "data/processed/transit_equity.db"
 FRONTEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "frontend")
 
 app = FastAPI(
     title="Multimodal Transit Desert Platform API",
-    description="Spatial transit equity and accessibility analytics for Greater Melbourne using DuckDB, Uber H3, and r5py.",
-    version="1.0.0"
+    description="Spatial transit equity and accessibility analytics for Greater Melbourne & Greater Mumbai using DuckDB, Uber H3, and r5py.",
+    version="2.0.0"
 )
+
+# Mount Mumbai API router
+app.include_router(mumbai_router)
 
 # Enable CORS for local development and client consumption
 app.add_middleware(
@@ -36,6 +54,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/api/v1/config", tags=["System Configuration"])
+def get_system_config():
+    """Expose non-sensitive client configuration including Map/Carto credentials."""
+    return {
+        "carto_api_key": os.getenv("CARTO_API_KEY", ""),
+        "version": "2.0.0",
+        "status": "operational"
+    }
 
 
 def get_db():
@@ -398,6 +426,55 @@ def get_pois():
         return results
     finally:
         con.close()
+
+
+@app.get("/api/v1/cities", tags=["System"])
+def get_supported_cities():
+    """Return available cities metadata, viewports, and feature flags."""
+    return {
+        "cities": [
+            {
+                "id": "melbourne",
+                "name": "Greater Melbourne",
+                "country": "Australia",
+                "center": [144.9631, -37.8136],
+                "zoom": 10.0,
+                "pitch": 45.0,
+                "bearing": -15.0,
+                "endpoints": {
+                    "deserts": "/api/v1/transit-deserts",
+                    "top_suburbs": "/api/v1/suburbs/top",
+                    "stats": "/api/v1/stats",
+                    "pois": "/api/v1/pois",
+                    "health": "/api/v1/health"
+                },
+                "total_h3_cells": 121802,
+                "cutoff_time_min": 45,
+                "metric_label": "SEIFA Disadvantage & Density"
+            },
+            {
+                "id": "mumbai",
+                "name": "Greater Mumbai",
+                "country": "India",
+                "center": [72.8777, 19.0760],
+                "zoom": 10.5,
+                "pitch": 45.0,
+                "bearing": -20.0,
+                "endpoints": {
+                    "deserts": "/api/v1/mumbai/transit-deserts",
+                    "top_deserts": "/api/v1/mumbai/deserts/top",
+                    "stats": "/api/v1/mumbai/stats",
+                    "pois": "/api/v1/mumbai/pois",
+                    "slums": "/api/v1/mumbai/slums",
+                    "wards": "/api/v1/mumbai/wards",
+                    "health": "/api/v1/mumbai/health"
+                },
+                "total_h3_cells": 10891,
+                "cutoff_time_min": 90,
+                "metric_label": "Informal Slum Clusters & Density"
+            }
+        ]
+    }
 
 
 # --- Static Frontend Serving ---
