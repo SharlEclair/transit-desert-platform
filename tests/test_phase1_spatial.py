@@ -11,7 +11,6 @@ import pytest
 
 TRANSIT_LINES_PATH = Path("data/mumbai/processed/mumbai_transit_lines.geojson")
 STATIONS_RAW_PATH = Path("data/mumbai/raw/metro_network/mumbai_metro_stations.json")
-STATIONS_RESOLVED_PATH = Path("data/mumbai/processed/mumbai_metro_stations_resolved.json")
 STATIONS_GEOJSON_PATH = Path("data/mumbai/processed/mumbai_metro_stations_resolved.geojson")
 
 BBOX = (72.65, 18.70, 73.55, 20.10)  # [min_lon, min_lat, max_lon, max_lat]
@@ -43,25 +42,25 @@ def test_unified_raw_metro_stations_count():
 
 
 def test_resolved_metro_stations_interpolation_and_bounds():
-    """Verify all 178 stations in resolved JSON have non-null WGS84 coordinates in bounds."""
-    assert STATIONS_RESOLVED_PATH.exists(), f"Missing {STATIONS_RESOLVED_PATH}"
-    with open(STATIONS_RESOLVED_PATH, "r", encoding="utf-8") as f:
+    """Verify all 177 stations in resolved GeoJSON have non-null WGS84 coordinates in bounds."""
+    assert STATIONS_GEOJSON_PATH.exists(), f"Missing {STATIONS_GEOJSON_PATH}"
+    with open(STATIONS_GEOJSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
         
-    stations = data["stations"]
-    assert len(stations) == 177
+    features = data["features"]
+    assert len(features) == 177
     
     # Check lines present
     expected_lines = {"1", "2A", "2B", "3", "4", "4A", "5", "6", "7", "7A", "9", "12"}
-    actual_lines = set(s["line_id"] for s in stations)
+    actual_lines = set(f["properties"]["line_id"] for f in features)
     assert actual_lines == expected_lines, f"Line mismatch: {actual_lines ^ expected_lines}"
     
-    for s in stations:
-        lat = s.get("lat")
-        lon = s.get("lon")
-        assert lat is not None and lon is not None, f"Station {s['station_name']} has null coords"
-        assert BBOX[1] <= lat <= BBOX[3], f"Station {s['station_name']} lat {lat} outside Mumbai bounds"
-        assert BBOX[0] <= lon <= BBOX[2], f"Station {s['station_name']} lon {lon} outside Mumbai bounds"
+    for f in features:
+        lon, lat = f["geometry"]["coordinates"]
+        name = f["properties"]["station_name"]
+        assert lat is not None and lon is not None, f"Station {name} has null coords"
+        assert BBOX[1] <= lat <= BBOX[3], f"Station {name} lat {lat} outside Mumbai bounds"
+        assert BBOX[0] <= lon <= BBOX[2], f"Station {name} lon {lon} outside Mumbai bounds"
 
 
 def test_resolved_stations_geojson():
