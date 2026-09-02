@@ -276,9 +276,13 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
 
         if lid == "2B":
             kml_track = kml_lines.get("Line 2B", [])
-            # Phase 1 Operational: Mandale to Chembur / Diamond Garden (6 stations)
+            andheri_west_coord = [72.83144644948665, 19.12914078482039]
+            chembur_coord = [72.90186403105763, 19.05178126378758]  # Diamond Garden
+            mandale_coord = [72.9384851904635, 19.04961564088568]
+
+            # Phase 1 Operational: Diamond Garden / Chembur to Mandale (6 stations)
             if len(op_stns) >= 2 and kml_track:
-                op_coords = slice_kml_track(kml_track, [op_stns[0]["lon"], op_stns[0]["lat"]], [op_stns[-1]["lon"], op_stns[-1]["lat"]])
+                op_coords = slice_kml_track(kml_track, chembur_coord, mandale_coord)
                 features.append({
                     "type": "Feature",
                     "geometry": {"type": "LineString", "coordinates": op_coords},
@@ -298,9 +302,9 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
                     }
                 })
 
-            # Phase 2 Under Construction: ESIC Nagar to Diamond Garden / Chembur (13 stations)
+            # Phase 2 Under Construction: Andheri West (Line 2A) -> Prem Nagar -> ESIC Nagar -> ... -> Diamond Garden (13 stations)
             if len(uc_stns) >= 2 and kml_track:
-                uc_coords = slice_kml_track(kml_track, [uc_stns[0]["lon"], uc_stns[0]["lat"]], [op_stns[0]["lon"], op_stns[0]["lat"]])
+                uc_coords = slice_kml_track(kml_track, andheri_west_coord, chembur_coord)
                 features.append({
                     "type": "Feature",
                     "geometry": {"type": "LineString", "coordinates": uc_coords},
@@ -315,7 +319,7 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
                         "stroke_width": 3.5,
                         "dasharray": [2, 2],
                         "station_count": len(uc_stns),
-                        "start_station": uc_stns[0]["station_name"],
+                        "start_station": "Andheri West / DN Nagar",
                         "end_station": uc_stns[-1]["station_name"]
                     }
                 })
