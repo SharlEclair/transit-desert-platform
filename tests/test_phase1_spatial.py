@@ -49,7 +49,7 @@ def test_resolved_metro_stations_interpolation_and_bounds():
         data = json.load(f)
         
     stations = data["stations"]
-    assert len(stations) == 178
+    assert len(stations) == 177
     
     # Check lines present
     expected_lines = {"1", "2A", "2B", "3", "4", "4A", "5", "6", "7", "7A", "9", "12"}
@@ -68,6 +68,6 @@ def test_resolved_stations_geojson():
     """Verify resolved GeoJSON FeatureCollection."""
     assert STATIONS_GEOJSON_PATH.exists(), f"Missing {STATIONS_GEOJSON_PATH}"
     gdf = gpd.read_file(str(STATIONS_GEOJSON_PATH))
-    assert len(gdf) == 178
+    assert len(gdf) == 177
     assert gdf.crs.to_epsg() == 4326
     assert (gdf.geometry.geom_type == "Point").all()

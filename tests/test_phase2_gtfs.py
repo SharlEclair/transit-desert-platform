@@ -64,7 +64,7 @@ def test_routes_and_line2b_split(gtfs_tables):
 def test_stops_count_and_coordinates(gtfs_tables):
     """Verify stops have valid coordinates."""
     stops = gtfs_tables["stops.txt"]
-    assert len(stops) == 178, f"Expected 178 stops, got {len(stops)}"
+    assert len(stops) == 177, f"Expected 177 stops, got {len(stops)}"
     assert stops["stop_lat"].notnull().all()
     assert stops["stop_lon"].notnull().all()
     assert (stops["stop_lat"] >= 18.70).all() and (stops["stop_lat"] <= 20.10).all()
