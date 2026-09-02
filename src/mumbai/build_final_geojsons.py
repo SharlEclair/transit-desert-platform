@@ -20,6 +20,8 @@ import logging
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Dict, List, Any
+from shapely.geometry import LineString, Point
+from shapely.ops import substring
 
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s] [%(levelname)s] %(message)s")
 logger = logging.getLogger("BuildFinalGeoJSONs")
@@ -217,6 +219,27 @@ def extract_kml_tracks():
     return kml_lines
 
 
+def slice_kml_track(kml_coords: List[List[float]], start_pt: List[float], end_pt: List[float]) -> List[List[float]]:
+    """Precisely slice a KML LineString between two station coordinates using Shapely projection."""
+    if not kml_coords or len(kml_coords) < 2:
+        return [[float(start_pt[0]), float(start_pt[1])], [float(end_pt[0]), float(end_pt[1])]]
+    try:
+        ls = LineString(kml_coords)
+        p1 = ls.project(Point(start_pt))
+        p2 = ls.project(Point(end_pt))
+        if p1 > p2:
+            p1, p2 = p2, p1
+        if p2 - p1 < 1e-7:
+            return [[float(start_pt[0]), float(start_pt[1])], [float(end_pt[0]), float(end_pt[1])]]
+        sub = substring(ls, p1, p2)
+        coords = [[float(x), float(y)] for x, y in sub.coords]
+        if len(coords) >= 2:
+            return coords
+    except Exception as e:
+        logger.warning(f"Error slicing track: {e}")
+    return [[float(start_pt[0]), float(start_pt[1])], [float(end_pt[0]), float(end_pt[1])]]
+
+
 def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[str, List[List[float]]]):
     logger.info("Synthesizing Styled Metro Track alignments...")
     features = []
@@ -241,31 +264,21 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
     for lid in line_ids:
         stns = [s for s in station_json_list if s["line_id"] == lid]
         stns.sort(key=lambda s: s["sequence"])
-        if len(stns) < 2:
+        if len(stns) < 2 and lid != "7A":
             continue
 
         color = MMRDA_COLORS.get(lid, "#FFFFFF")
         lname = LINE_NAMES.get(lid, f"Line {lid}")
 
-        # Find raw KML track if available
-        matched_kml_track = None
-        for k_name, l_id in kml_name_mapping.items():
-            if l_id == lid and k_name in kml_lines:
-                matched_kml_track = kml_lines[k_name]
-                break
-
-        # Fallback to station sequence line if KML LineString not present
-        if not matched_kml_track:
-            matched_kml_track = [[s["lon"], s["lat"]] for s in stns]
-
-        # Check operational split (Line 2B and Line 9)
+        # Check operational split (Line 2B, Line 7/7A, and Line 9)
         op_stns = [s for s in stns if s["status"] == "operational"]
         uc_stns = [s for s in stns if s["status"] == "under_construction"]
 
         if lid == "2B":
-            # Phase 1 Operational: Mandale to Chembur (6 stations)
-            if len(op_stns) >= 2:
-                op_coords = [[s["lon"], s["lat"]] for s in op_stns]
+            kml_track = kml_lines.get("Line 2B", [])
+            # Phase 1 Operational: Mandale to Chembur / Diamond Garden (6 stations)
+            if len(op_stns) >= 2 and kml_track:
+                op_coords = slice_kml_track(kml_track, [op_stns[0]["lon"], op_stns[0]["lat"]], [op_stns[-1]["lon"], op_stns[-1]["lat"]])
                 features.append({
                     "type": "Feature",
                     "geometry": {"type": "LineString", "coordinates": op_coords},
@@ -285,9 +298,9 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
                     }
                 })
 
-            # Phase 2 Under Construction: ESIC Nagar to EEH (13 stations)
-            if len(uc_stns) >= 2:
-                uc_coords = [[s["lon"], s["lat"]] for s in uc_stns]
+            # Phase 2 Under Construction: ESIC Nagar to Diamond Garden / Chembur (13 stations)
+            if len(uc_stns) >= 2 and kml_track:
+                uc_coords = slice_kml_track(kml_track, [uc_stns[0]["lon"], uc_stns[0]["lat"]], [op_stns[0]["lon"], op_stns[0]["lat"]])
                 features.append({
                     "type": "Feature",
                     "geometry": {"type": "LineString", "coordinates": uc_coords},
@@ -307,10 +320,61 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
                     }
                 })
 
+        elif lid == "7":
+            # Line 7 Operational: Ovaripada / Dahisar East -> Gundavali (14 stations)
+            kml_track = kml_lines.get("Metro Line 7 (Red)", [])
+            if kml_track and len(stns) >= 2:
+                op_coords = slice_kml_track(kml_track, [stns[0]["lon"], stns[0]["lat"]], [stns[-1]["lon"], stns[-1]["lat"]])
+                features.append({
+                    "type": "Feature",
+                    "geometry": {"type": "LineString", "coordinates": op_coords},
+                    "properties": {
+                        "line_id": "7",
+                        "line_name": f"{lname} (Operational)",
+                        "status": "operational",
+                        "network": "metro",
+                        "transit_type": "metro",
+                        "is_operational": True,
+                        "color": color,
+                        "stroke_width": 4.5,
+                        "dasharray": [],
+                        "station_count": len(stns),
+                        "start_station": stns[0]["station_name"],
+                        "end_station": stns[-1]["station_name"]
+                    }
+                })
+
+        elif lid == "7A":
+            # Line 7A Under Construction: Gundavali -> Airport Colony -> CSIA (2 stations)
+            kml_track = kml_lines.get("Metro Line 7 (Red)", [])
+            stns_7 = [s for s in station_json_list if s["line_id"] == "7"]
+            gundavali_pt = [stns_7[-1]["lon"], stns_7[-1]["lat"]] if stns_7 else [stns[0]["lon"], stns[0]["lat"]]
+            csia_pt = [stns[-1]["lon"], stns[-1]["lat"]]
+            uc_coords = slice_kml_track(kml_track, gundavali_pt, csia_pt) if kml_track else [[s["lon"], s["lat"]] for s in stns]
+            features.append({
+                "type": "Feature",
+                "geometry": {"type": "LineString", "coordinates": uc_coords},
+                "properties": {
+                    "line_id": "7A",
+                    "line_name": lname,
+                    "status": "under_construction",
+                    "network": "metro",
+                    "transit_type": "metro",
+                    "is_operational": False,
+                    "color": color,
+                    "stroke_width": 3.5,
+                    "dasharray": [2, 2],
+                    "station_count": len(stns),
+                    "start_station": stns[0]["station_name"],
+                    "end_station": stns[-1]["station_name"]
+                }
+            })
+
         elif lid == "9":
+            kml_track = kml_lines.get("Metro Line 9 (Red)", [])
             # Phase 1 Operational: Dahisar East to Kashigaon (4 stations)
-            if len(op_stns) >= 2:
-                op_coords = [[s["lon"], s["lat"]] for s in op_stns]
+            if len(op_stns) >= 2 and kml_track:
+                op_coords = slice_kml_track(kml_track, [op_stns[0]["lon"], op_stns[0]["lat"]], [op_stns[-1]["lon"], op_stns[-1]["lat"]])
                 features.append({
                     "type": "Feature",
                     "geometry": {"type": "LineString", "coordinates": op_coords},
@@ -330,9 +394,9 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
                     }
                 })
 
-            # Phase 2 Under Construction (4 stations)
-            if len(uc_stns) >= 2:
-                uc_coords = [[op_stns[-1]["lon"], op_stns[-1]["lat"]]] + [[s["lon"], s["lat"]] for s in uc_stns]
+            # Phase 2 Under Construction: Kashigaon to Subhash Chandra Bose Stadium (4 stations)
+            if len(uc_stns) >= 2 and kml_track:
+                uc_coords = slice_kml_track(kml_track, [op_stns[-1]["lon"], op_stns[-1]["lat"]], [uc_stns[-1]["lon"], uc_stns[-1]["lat"]])
                 features.append({
                     "type": "Feature",
                     "geometry": {"type": "LineString", "coordinates": uc_coords},
@@ -352,36 +416,25 @@ def build_metro_tracks(station_json_list: List[Dict[str, Any]], kml_lines: Dict[
                     }
                 })
 
-        elif lid == "7A":
-            # 2 stations: Andheri East -> CSIA
-            coords = [[s["lon"], s["lat"]] for s in stns]
-            features.append({
-                "type": "Feature",
-                "geometry": {"type": "LineString", "coordinates": coords},
-                "properties": {
-                    "line_id": "7A",
-                    "line_name": lname,
-                    "status": "under_construction",
-                    "network": "metro",
-                    "transit_type": "metro",
-                    "is_operational": False,
-                    "color": color,
-                    "stroke_width": 3.5,
-                    "dasharray": [2, 2],
-                    "station_count": len(stns),
-                    "start_station": stns[0]["station_name"],
-                    "end_station": stns[-1]["station_name"]
-                }
-            })
-
         else:
-            # Single status line (Line 1, 2A, 3, 7 are operational; 4, 4A, 5, 6, 12 are under_construction)
+            # Single status line (Line 1, 2A, 3 are operational; 4, 4A, 5, 6, 12 are under_construction)
             is_op = (stns[0]["status"] == "operational")
             status_str = "operational" if is_op else "under_construction"
             
+            matched_kml_track = None
+            for k_name, l_id in kml_name_mapping.items():
+                if l_id == lid and k_name in kml_lines:
+                    matched_kml_track = kml_lines[k_name]
+                    break
+
+            if matched_kml_track:
+                track_coords = slice_kml_track(matched_kml_track, [stns[0]["lon"], stns[0]["lat"]], [stns[-1]["lon"], stns[-1]["lat"]])
+            else:
+                track_coords = [[s["lon"], s["lat"]] for s in stns]
+            
             features.append({
                 "type": "Feature",
-                "geometry": {"type": "LineString", "coordinates": matched_kml_track},
+                "geometry": {"type": "LineString", "coordinates": track_coords},
                 "properties": {
                     "line_id": lid,
                     "line_name": lname,
